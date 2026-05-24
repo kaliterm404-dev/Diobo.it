@@ -182,7 +182,6 @@ export default function SpaceScene() {
             opacity: i === 0 ? 1 : 0,
             willChange: "transform, opacity",
             transition: "opacity 0.1s linear",
-            filter: "saturate(1.3) brightness(1.1)",
           }}
         />
       ))}
