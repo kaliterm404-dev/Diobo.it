@@ -158,7 +158,7 @@ export default function Home() {
             CHIEDI E TI <span style={{ color: "#6366f1" }}>SARÀ DATO</span>
           </h2>
           <p className="fade-in" style={{ color: "#e0e7ff", fontSize: "1.3rem", textAlign: "center", maxWidth: "500px", marginBottom: "3rem", fontFamily: "var(--font-orbitron)", fontWeight: 500, letterSpacing: "0.05em" }}>
-            Raccontaci la tua idea.<br/><span style={{ whiteSpace: "nowrap" }}>Noi la trasformiamo in qualcosa di spettacolare.</span>
+            Raccontaci la tua idea.<br/>Noi la trasformiamo in qualcosa di spettacolare.
           </p>
           <a className="fade-in" href="mailto:dioboinfo@gmail.com" style={{
             display: "inline-block",
