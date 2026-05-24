@@ -88,17 +88,17 @@ export default function SpaceScene() {
           const dx = s.x - cx;
           const dy = s.y - cy;
           const dist = Math.sqrt(dx * dx + dy * dy) || 1;
-          s.x += (dx / dist) * scrollSpeed * s.z * 2;
-          s.y += (dy / dist) * scrollSpeed * s.z * 2;
+          s.x += (dx / dist) * scrollSpeed * s.z * 0.8;
+          s.y += (dy / dist) * scrollSpeed * s.z * 0.8;
         }
 
-        s.x -= mx * s.z * 0.5;
-        s.y -= my * s.z * 0.5;
+        s.x -= mx * s.z * 0.3;
+        s.y -= my * s.z * 0.3;
 
-        if (s.x < 0) s.x = canvas.width;
-        if (s.x > canvas.width) s.x = 0;
-        if (s.y < 0) s.y = canvas.height;
-        if (s.y > canvas.height) s.y = 0;
+        if (s.x < -50 || s.x > canvas.width + 50 || s.y < -50 || s.y > canvas.height + 50) {
+          s.x = Math.random() * canvas.width;
+          s.y = Math.random() * canvas.height;
+        }
 
         const twinkle = Math.sin(time * s.twinkleSpeed + s.twinkleOffset) * 0.4 + 0.6;
         const alpha = s.baseAlpha * twinkle;
