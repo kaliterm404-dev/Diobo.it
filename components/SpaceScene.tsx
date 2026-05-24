@@ -3,8 +3,9 @@
 import { useEffect, useRef } from "react";
 
 const layers = [
-  { src: "/4-earth.jpg", depthStart: 0, depthEnd: 0.55, scaleStart: 0.75, scaleEnd: 2.5, opacityStart: 1, opacityEnd: 0 },
-  { src: "/5-pyramids.jpg", depthStart: 0.4, depthEnd: 1.0, scaleStart: 0.8, scaleEnd: 1.3, opacityStart: 0, opacityEnd: 1 },
+  { src: "/3-globe.jpg", depthStart: 0, depthEnd: 0.35, scaleStart: 0.75, scaleEnd: 1.8, opacityStart: 1, opacityEnd: 0 },
+  { src: "/4-earth.jpg", depthStart: 0.25, depthEnd: 0.65, scaleStart: 0.8, scaleEnd: 2, opacityStart: 0, opacityEnd: 0 },
+  { src: "/5-pyramids.jpg", depthStart: 0.55, depthEnd: 1.0, scaleStart: 0.9, scaleEnd: 1.2, opacityStart: 0, opacityEnd: 1 },
 ];
 
 function lerp(a: number, b: number, t: number) {
