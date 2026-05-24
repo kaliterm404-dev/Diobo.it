@@ -3,9 +3,9 @@
 import { useEffect, useRef } from "react";
 
 const layers = [
-  { src: "/3-globe.jpg", depthStart: 0, depthEnd: 0.35, scaleStart: 0.75, scaleEnd: 1.8, opacityStart: 1, opacityEnd: 0 },
-  { src: "/4-earth.jpg", depthStart: 0.25, depthEnd: 0.65, scaleStart: 0.8, scaleEnd: 2, opacityStart: 0, opacityEnd: 0 },
-  { src: "/5-pyramids.jpg", depthStart: 0.55, depthEnd: 1.0, scaleStart: 0.9, scaleEnd: 1.2, opacityStart: 0, opacityEnd: 1 },
+  { src: "/3-globe.jpg", depthStart: 0, depthEnd: 0.35, scaleStart: 0.55, scaleEnd: 1.5, opacityStart: 1, opacityEnd: 0 },
+  { src: "/4-earth.jpg", depthStart: 0.25, depthEnd: 0.65, scaleStart: 0.7, scaleEnd: 1.5, opacityStart: 0, opacityEnd: 0 },
+  { src: "/5-pyramids.jpg", depthStart: 0.55, depthEnd: 1.0, scaleStart: 0.9, scaleEnd: 1.1, opacityStart: 0, opacityEnd: 1 },
 ];
 
 function lerp(a: number, b: number, t: number) {
@@ -178,7 +178,8 @@ export default function SpaceScene() {
             position: "absolute",
             inset: "-5%",
             backgroundImage: `url(${L.src})`,
-            backgroundSize: "cover",
+            backgroundSize: (L.src.includes("globe") || L.src.includes("earth")) ? "contain" : "cover",
+            backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             opacity: i === 0 ? 1 : 0,
             willChange: "transform, opacity",
