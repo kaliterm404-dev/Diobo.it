@@ -80,7 +80,7 @@ export default function Home() {
           </h2>
 
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem", maxWidth: "1000px", width: "100%" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "2rem", width: "100%" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2rem", width: "100%" }} className="services-grid">
               {[
                 { icon: "🛠️", title: "Consulenza IT", desc: "Assistenza informatica completa. Dal server al singolo dispositivo." },
                 { icon: "🔗", title: "Domini", desc: "Registrazione domini semplici da ricordare." },
