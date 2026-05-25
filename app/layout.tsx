@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DIOBO.IT — Siti Web, Domini, Grafica",
     description: "Creiamo esperienze digitali che lasciano il segno. Siti web, domini, grafica e consulenza IT a Bologna.",
-    url: "https://diobo-it.vercel.app",
+    url: "https://www.diobo.it",
     siteName: "DIOBO.IT",
     type: "website",
     locale: "it_IT",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://diobo-it.vercel.app",
+    canonical: "https://www.diobo.it",
   },
 };
 
