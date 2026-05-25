@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "it_IT",
   },
+  verification: {
+    google: "fVLBr-MgbWKs94q4YS-ECHI0O0LuWx-6U6ptuv_etm8",
+  },
   robots: {
     index: true,
     follow: true,
