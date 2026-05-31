@@ -52,7 +52,84 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it" className={`${orbitron.variable} ${exo2.variable} h-full antialiased`}>
-      <body className="min-h-full w-full bg-black text-white overflow-x-hidden">{children}<Analytics /></body>
+      <body className="min-h-full w-full bg-black text-white overflow-x-hidden">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "@id": "https://www.diobo.it/#organization",
+                "name": "DIOBO.IT",
+                "url": "https://www.diobo.it",
+                "logo": "https://www.diobo.it/logo.png",
+                "description": "Creiamo siti web spettacolari, registriamo domini facili da ricordare, progettiamo loghi unici e offriamo consulenza informatica completa.",
+                "email": "dioboinfo@gmail.com",
+                "areaServed": {
+                  "@type": "City",
+                  "name": "Bologna",
+                  "containedInPlace": { "@type": "Country", "name": "Italia" }
+                },
+                "knowsAbout": [
+                  "Web Design", "Sviluppo Siti Web", "Consulenza IT",
+                  "Registrazione Domini", "Grafica", "Logo Design",
+                  "Assistenza Informatica", "Web Development"
+                ],
+                "sameAs": []
+              },
+              {
+                "@type": "LocalBusiness",
+                "@id": "https://www.diobo.it/#localbusiness",
+                "name": "DIOBO.IT",
+                "url": "https://www.diobo.it",
+                "email": "dioboinfo@gmail.com",
+                "image": "https://www.diobo.it/logo.png",
+                "description": "Siti web, domini, grafica e consulenza IT a Bologna. Creiamo esperienze digitali che lasciano il segno.",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Bologna",
+                  "addressRegion": "Emilia-Romagna",
+                  "addressCountry": "IT"
+                },
+                "priceRange": "€€",
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Servizi Digitali",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": { "@type": "Service", "name": "Realizzazione Siti Web", "description": "Pagine web di facile accesso, personalizzabili e dal design spettacolare" }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": { "@type": "Service", "name": "Registrazione Domini", "description": "Domini semplici da ricordare" }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": { "@type": "Service", "name": "Grafica e Logo Design", "description": "Logo distintivo, rappresentativo ed unico. Grafica semplice ed elegante" }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": { "@type": "Service", "name": "Consulenza IT", "description": "Assistenza informatica completa. Dal server al singolo dispositivo" }
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://www.diobo.it/#website",
+                "name": "DIOBO.IT",
+                "url": "https://www.diobo.it",
+                "description": "Il tuo universo digitale",
+                "publisher": { "@id": "https://www.diobo.it/#organization" },
+                "inLanguage": "it-IT"
+              }
+            ]
+          }) }}
+        />
+        {children}<Analytics />
+      </body>
     </html>
   );
 }
