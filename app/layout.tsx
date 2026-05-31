@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Orbitron, Inter } from "next/font/google";
+import { Orbitron, Exo_2 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
@@ -8,8 +8,8 @@ const orbitron = Orbitron({
   subsets: ["latin"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const exo2 = Exo_2({
+  variable: "--font-exo2",
   subsets: ["latin"],
 });
 
@@ -51,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="it" className={`${orbitron.variable} ${inter.variable} h-full antialiased`}>
+    <html lang="it" className={`${orbitron.variable} ${exo2.variable} h-full antialiased`}>
       <body className="min-h-full w-full bg-black text-white overflow-x-hidden">{children}<Analytics /></body>
     </html>
   );
