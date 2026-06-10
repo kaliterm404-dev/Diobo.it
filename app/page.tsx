@@ -153,6 +153,183 @@ function Marquee() {
 }
 
 
+const universes = [
+  {
+    slug: "elegante",
+    title: "Elegante",
+    tag: "Aurora",
+    desc: "Tipografia leggera, calma premium. Il lusso del silenzio.",
+  },
+  {
+    slug: "wow",
+    title: "Wow",
+    tag: "Viaggio interstellare",
+    desc: "Un volo 3D tra pianeti, stargate e iperspazio.",
+  },
+  {
+    slug: "ipnotico",
+    title: "Ipnotico",
+    tag: "Galassia",
+    desc: "22.000 stelle che respirano mentre le navighi.",
+  },
+];
+
+function UniversePreview({ slug }: { slug: string }) {
+  if (slug === "elegante") {
+    return (
+      <div style={{
+        height: "150px", position: "relative", overflow: "hidden",
+        background: "radial-gradient(circle at 30% 40%, rgba(99,102,241,0.45), transparent 60%), radial-gradient(circle at 75% 75%, rgba(139,92,246,0.35), transparent 60%), #05050f",
+        display: "flex", alignItems: "center", justifyContent: "center",
+      }}>
+        <span style={{
+          fontFamily: "var(--font-exo2)", fontWeight: 200, fontSize: "3rem",
+          color: "#e2e8f0", letterSpacing: "0.05em",
+        }}>
+          Aa
+        </span>
+      </div>
+    );
+  }
+  if (slug === "wow") {
+    return (
+      <div style={{
+        height: "150px", position: "relative", overflow: "hidden", background: "#000010",
+      }}>
+        <div style={{
+          position: "absolute", inset: "-30%",
+          background: "repeating-linear-gradient(105deg, transparent 0px, transparent 16px, rgba(99,102,241,0.55) 16px, rgba(99,102,241,0.55) 17px, transparent 17px, transparent 46px)",
+        }} />
+        <div style={{
+          position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)",
+          width: "26px", height: "26px", borderRadius: "50%",
+          background: "radial-gradient(circle, #fff, #c4b5fd 40%, transparent 70%)",
+          boxShadow: "0 0 30px #a78bfa, 0 0 60px rgba(167,139,250,0.5)",
+        }} />
+      </div>
+    );
+  }
+  return (
+    <div style={{
+      height: "150px", position: "relative", overflow: "hidden", background: "#010108",
+      display: "flex", alignItems: "center", justifyContent: "center",
+    }}>
+      <div className="universe-galaxy-spin" style={{
+        width: "120px", height: "120px", borderRadius: "50%",
+        background: "conic-gradient(from 0deg, #6366f1, #8b5cf6, #22d3ee, #312e81, #6366f1)",
+        filter: "blur(10px)", opacity: 0.85,
+      }} />
+      <div style={{
+        position: "absolute", width: "14px", height: "14px", borderRadius: "50%",
+        background: "radial-gradient(circle, #fff, #c7d2fe 50%, transparent 80%)",
+        boxShadow: "0 0 20px #a5b4fc",
+      }} />
+    </div>
+  );
+}
+
+function UniversiSection() {
+  return (
+    <div style={{
+      minHeight: "90vh", display: "flex", flexDirection: "column",
+      alignItems: "center", justifyContent: "center", padding: "4rem 2rem",
+    }}>
+      <style>{`
+        @keyframes universe-spin { to { transform: rotate(360deg); } }
+        .universe-galaxy-spin { animation: universe-spin 14s linear infinite; }
+        @media (max-width: 900px) {
+          .universes-grid { grid-template-columns: 1fr !important; max-width: 380px !important; }
+        }
+      `}</style>
+      <motion.h2
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, type: "spring", damping: 20 }}
+        style={{
+          fontFamily: "var(--font-orbitron)",
+          fontSize: "clamp(1.5rem, 4vw, 3rem)",
+          fontWeight: 700, textAlign: "center", marginBottom: "1rem",
+          textShadow: "0 0 20px rgba(99,102,241,0.3)",
+        }}
+      >
+        I NOSTRI <span style={{ color: "#6366f1" }}>UNIVERSI</span>
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        style={{
+          fontFamily: "var(--font-exo2)", fontSize: "1.05rem", color: "#e0e7ff",
+          opacity: 0.8, textAlign: "center", maxWidth: "560px", marginBottom: "3rem",
+          lineHeight: 1.7,
+        }}
+      >
+        Tre stili, tre esperienze dal vivo. Concept interattivi firmati DIOBO — entra e scegli il tuo.
+      </motion.p>
+
+      <div className="universes-grid" style={{
+        display: "grid", gridTemplateColumns: "repeat(3, 1fr)",
+        gap: "1.5rem", maxWidth: "1000px", width: "100%",
+      }}>
+        {universes.map((u, i) => (
+          <motion.a
+            key={u.slug}
+            href={`/stili/${u.slug}`}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: i * 0.12, type: "spring", damping: 20 }}
+            whileHover={{
+              y: -8, scale: 1.02,
+              boxShadow: "0 10px 50px rgba(99,102,241,0.35)",
+              borderColor: "rgba(99,102,241,0.6)",
+            }}
+            whileTap={{ scale: 0.97 }}
+            style={{
+              display: "block", textDecoration: "none",
+              background: "rgba(5,5,20,0.9)",
+              border: "1px solid rgba(99,102,241,0.2)",
+              borderRadius: "16px", overflow: "hidden",
+              cursor: "pointer",
+            }}
+          >
+            <UniversePreview slug={u.slug} />
+            <div style={{ padding: "1.5rem" }}>
+              <p style={{
+                fontFamily: "var(--font-orbitron)", fontSize: "0.62rem",
+                letterSpacing: "0.3em", color: "#818cf8", marginBottom: "0.5rem",
+                textTransform: "uppercase",
+              }}>
+                {u.tag}
+              </p>
+              <h3 style={{
+                fontFamily: "var(--font-orbitron)", fontSize: "1.25rem", fontWeight: 700,
+                color: "#e0e7ff", marginBottom: "0.6rem",
+              }}>
+                {u.title}
+              </h3>
+              <p style={{
+                fontFamily: "var(--font-exo2)", fontSize: "0.9rem", lineHeight: 1.6,
+                color: "#e0e7ff", opacity: 0.75, marginBottom: "1rem",
+              }}>
+                {u.desc}
+              </p>
+              <span style={{
+                fontFamily: "var(--font-orbitron)", fontSize: "0.7rem",
+                letterSpacing: "0.2em", color: "#6366f1",
+              }}>
+                ESPLORA →
+              </span>
+            </div>
+          </motion.a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function GlowCard({ service, index }: { service: typeof services[0]; index: number }) {
   const Icon = service.icon;
   const cardRef = useRef<HTMLDivElement>(null);
@@ -555,6 +732,11 @@ export default function Home() {
 
           <MissionTimeline />
         </div>
+
+        <GlowSeparator />
+
+        {/* UNIVERSI — portfolio concept */}
+        <UniversiSection />
 
         <GlowSeparator />
 
