@@ -5,6 +5,8 @@ import { motion, useInView, useScroll, useTransform, useMotionValue, useSpring }
 import { Monitor, Globe, Palette, Layout } from "lucide-react";
 import dynamic from "next/dynamic";
 
+import Checkup from "@/components/Checkup";
+
 const SpaceScene = dynamic(() => import("@/components/SpaceScene"), { ssr: false });
 
 function CursorGlow() {
@@ -50,14 +52,14 @@ const CONTACT_MAILTO =
   encodeURIComponent("Ciao, vorrei informazioni su:\n\n- Servizio (sito / assistenza IT / dominio ed email / grafica):\n- Due righe sul progetto:\n- Come preferite ricontattarmi:\n");
 
 const services = [
-  { icon: Layout, title: "Siti Web", desc: "Dal one-page al sito completo. Hosting moderno, velocissimi e sicuri di serie.", price: "da 390 €" },
+  { icon: Layout, title: "Siti Web", desc: "Dal one-page al sito completo. Veloci, sicuri e su hosting moderno, di serie.", price: "da 390 €" },
   { icon: Monitor, title: "Assistenza IT", desc: "Reti, server, backup e sicurezza. Dal server al singolo dispositivo, a intervento o in canone.", price: "da 49 €/mese" },
   { icon: Globe, title: "Dominio + Email pro", desc: "Un nome facile da ricordare e caselle email professionali @tuonome, configurate a regola d'arte.", price: "su preventivo" },
   { icon: Palette, title: "Grafica & Logo", desc: "Un'identità visiva distintiva, semplice ed elegante. Riconoscibile al primo sguardo.", price: "su preventivo" },
 ];
 
 const whyPoints = [
-  { title: "Dal server al sito", desc: "Non un'agenzia che subappalta: un sistemista vero che progetta l'infrastruttura e costruisce anche il web." },
+  { title: "Dal server al sito", desc: "Non un'agenzia che subappalta: progettiamo l'infrastruttura e costruiamo anche il web, di persona." },
   { title: "Sicuro di default", desc: "HTTPS, header di sicurezza, backup e aggiornamenti non sono optional: sono il punto di partenza." },
   { title: "Un solo referente", desc: "Sito, dominio, email e assistenza in un unico posto. Una persona che risponde, non un ticket." },
 ];
@@ -383,7 +385,7 @@ function UniversiSection() {
             fontFamily: "var(--font-exo2)", fontSize: "0.9rem", lineHeight: 1.6,
             color: "#e0e7ff", opacity: 0.75, marginBottom: "1rem",
           }}>
-            Sito del movimento di liberazione dei bonsai: dominio, sito, hosting ed email configurati end-to-end da DIOBO.
+            Sito del movimento di liberazione dei bonsai: dominio, sito, hosting ed email, tutto configurato da DIOBO dalla A alla Z.
           </p>
           <span style={{
             fontFamily: "var(--font-orbitron)", fontSize: "0.7rem",
@@ -719,15 +721,49 @@ export default function Home() {
               fontFamily: "var(--font-exo2)",
             }}
           >
-            Dal server al sito: siti web, assistenza IT, domini ed email professionali a Bologna.
-            <br />Un sistemista vero che costruisce anche il web.
+            Dal server al sito. Siti web, assistenza IT, domini ed email professionali a Bologna —
+            da un sistemista vero che costruisce anche il web.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 2 }}
+            className="hero-ctas"
+            style={{ display: "flex", gap: "1rem", marginTop: "2.5rem", flexWrap: "wrap", justifyContent: "center" }}
+          >
+            <motion.a
+              href="#checkup"
+              whileHover={{ scale: 1.06, boxShadow: "0 0 40px rgba(99,102,241,0.6)" }}
+              whileTap={{ scale: 0.95 }}
+              style={{
+                padding: "1rem 2.2rem", borderRadius: "50px", textDecoration: "none",
+                background: "linear-gradient(135deg, #6366f1, #8b5cf6)", color: "#fff",
+                fontFamily: "var(--font-orbitron)", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em",
+                boxShadow: "0 0 30px rgba(99,102,241,0.35)",
+              }}
+            >
+              CHECK-UP GRATUITO DEL TUO SITO
+            </motion.a>
+            <motion.a
+              href={CONTACT_MAILTO}
+              whileHover={{ scale: 1.06, borderColor: "rgba(165,180,252,0.9)" }}
+              whileTap={{ scale: 0.95 }}
+              style={{
+                padding: "1rem 2.2rem", borderRadius: "50px", textDecoration: "none",
+                border: "1px solid rgba(99,102,241,0.5)", color: "#e0e7ff", background: "rgba(5,5,20,0.6)",
+                fontFamily: "var(--font-orbitron)", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em",
+              }}
+            >
+              CONTATTACI
+            </motion.a>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, delay: 1.8 }}
-            style={{ marginTop: "4rem" }}
+            style={{ marginTop: "3rem" }}
           >
             <motion.div
               animate={{ scaleY: [0.8, 1.2, 0.8], opacity: [0.4, 0.8, 0.4] }}
@@ -753,7 +789,12 @@ export default function Home() {
         </div>
 
         {/* SPACER */}
-        <div style={{ height: "100vh" }} />
+        <div style={{ height: "60vh" }} />
+
+        <GlowSeparator />
+
+        {/* CHECK-UP GRATUITO */}
+        <Checkup />
 
         <GlowSeparator />
 

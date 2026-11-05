@@ -15,7 +15,7 @@ const exo2 = Exo_2({
 
 export const metadata: Metadata = {
   title: "DIOBO.IT — Siti Web e Assistenza IT a Bologna | Dal server al sito",
-  description: "Siti web veloci e sicuri da 390 €, assistenza IT e sistemistica da 49 €/mese, domini ed email professionali, grafica e logo. Un sistemista vero che costruisce anche il web. Bologna.",
+  description: "Siti web veloci e sicuri da 390 €, assistenza IT da 49 €/mese, domini ed email pro, grafica e logo a Bologna. Un sistemista vero che costruisce anche il web.",
   keywords: ["diobo", "siti web bologna", "assistenza informatica bologna", "sistemista bologna", "email professionale", "web design bologna", "grafica bologna", "logo aziendale", "consulenza IT", "domini web", "realizzazione siti"],
   authors: [{ name: "DIOBO.IT" }],
   openGraph: {

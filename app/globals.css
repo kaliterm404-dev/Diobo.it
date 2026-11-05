@@ -134,3 +134,15 @@ body::after {
     max-width: 420px !important;
   }
 }
+
+/* Check-up */
+@keyframes checkup-spin { to { transform: rotate(360deg); } }
+.checkup-spin { animation: checkup-spin 1s linear infinite; }
+html { scroll-behavior: smooth; }
+@media (max-width: 760px) {
+  .checkup-grid { grid-template-columns: 1fr !important; }
+  .checkup-head { flex-direction: column; text-align: center; }
+}
+@media (max-width: 520px) {
+  .checkup-form { flex-direction: column; }
+}
