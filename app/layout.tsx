@@ -14,9 +14,9 @@ const exo2 = Exo_2({
 });
 
 export const metadata: Metadata = {
-  title: "DIOBO.IT — Siti Web, Domini, Grafica e Consulenza IT a Bologna",
-  description: "Creiamo siti web spettacolari, registriamo domini facili da ricordare, progettiamo loghi unici e offriamo consulenza informatica completa. Bologna.",
-  keywords: ["diobo", "siti web bologna", "web design bologna", "grafica bologna", "logo aziendale", "consulenza IT", "domini web", "realizzazione siti"],
+  title: "DIOBO.IT — Siti Web e Assistenza IT a Bologna | Dal server al sito",
+  description: "Siti web veloci e sicuri da 390 €, assistenza IT e sistemistica da 49 €/mese, domini ed email professionali, grafica e logo. Un sistemista vero che costruisce anche il web. Bologna.",
+  keywords: ["diobo", "siti web bologna", "assistenza informatica bologna", "sistemista bologna", "email professionale", "web design bologna", "grafica bologna", "logo aziendale", "consulenza IT", "domini web", "realizzazione siti"],
   authors: [{ name: "DIOBO.IT" }],
   openGraph: {
     title: "DIOBO.IT — Siti Web, Domini, Grafica",
@@ -99,7 +99,7 @@ export default function RootLayout({
                   "itemListElement": [
                     {
                       "@type": "Offer",
-                      "itemOffered": { "@type": "Service", "name": "Realizzazione Siti Web", "description": "Pagine web di facile accesso, personalizzabili e dal design spettacolare" }
+                      "itemOffered": { "@type": "Service", "name": "Realizzazione Siti Web", "description": "Dal one-page al sito completo, veloci e sicuri" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": "390", "priceCurrency": "EUR" }
                     },
                     {
                       "@type": "Offer",
@@ -111,7 +111,7 @@ export default function RootLayout({
                     },
                     {
                       "@type": "Offer",
-                      "itemOffered": { "@type": "Service", "name": "Consulenza IT", "description": "Assistenza informatica completa. Dal server al singolo dispositivo" }
+                      "itemOffered": { "@type": "Service", "name": "Assistenza IT e sistemistica", "description": "Reti, server, backup e sicurezza. Dal server al singolo dispositivo" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "49", "priceCurrency": "EUR", "unitText": "mese" }
                     }
                   ]
                 }

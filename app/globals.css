@@ -127,3 +127,10 @@ body::after {
     grid-template-columns: 1fr !important;
   }
 }
+
+@media (max-width: 900px) {
+  .why-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 420px !important;
+  }
+}

@@ -43,11 +43,23 @@ function CursorGlow() {
   );
 }
 
+const CONTACT_MAILTO =
+  "mailto:dioboinfo@gmail.com?subject=" +
+  encodeURIComponent("Richiesta informazioni da diobo.it") +
+  "&body=" +
+  encodeURIComponent("Ciao, vorrei informazioni su:\n\n- Servizio (sito / assistenza IT / dominio ed email / grafica):\n- Due righe sul progetto:\n- Come preferite ricontattarmi:\n");
+
 const services = [
-  { icon: Monitor, title: "Consulenza IT", desc: "Assistenza informatica completa. Dal server al singolo dispositivo." },
-  { icon: Globe, title: "Domini", desc: "Registrazione domini semplici da ricordare." },
-  { icon: Palette, title: "Grafica & Logo", desc: "Logo distintivo, rappresentativo ed unico. Grafica semplice ed elegante." },
-  { icon: Layout, title: "Siti Web", desc: "Pagine web di facile accesso, personalizzabili e dal design spettacolare." },
+  { icon: Layout, title: "Siti Web", desc: "Dal one-page al sito completo. Hosting moderno, velocissimi e sicuri di serie.", price: "da 390 €" },
+  { icon: Monitor, title: "Assistenza IT", desc: "Reti, server, backup e sicurezza. Dal server al singolo dispositivo, a intervento o in canone.", price: "da 49 €/mese" },
+  { icon: Globe, title: "Dominio + Email pro", desc: "Un nome facile da ricordare e caselle email professionali @tuonome, configurate a regola d'arte.", price: "su preventivo" },
+  { icon: Palette, title: "Grafica & Logo", desc: "Un'identità visiva distintiva, semplice ed elegante. Riconoscibile al primo sguardo.", price: "su preventivo" },
+];
+
+const whyPoints = [
+  { title: "Dal server al sito", desc: "Non un'agenzia che subappalta: un sistemista vero che progetta l'infrastruttura e costruisce anche il web." },
+  { title: "Sicuro di default", desc: "HTTPS, header di sicurezza, backup e aggiornamenti non sono optional: sono il punto di partenza." },
+  { title: "Un solo referente", desc: "Sito, dominio, email e assistenza in un unico posto. Una persona che risponde, non un ticket." },
 ];
 
 const missionPoints = [
@@ -239,6 +251,7 @@ function UniversiSection() {
         .universe-galaxy-spin { animation: universe-spin 14s linear infinite; }
         @media (max-width: 900px) {
           .universes-grid { grid-template-columns: 1fr !important; max-width: 380px !important; }
+          .case-card { grid-template-columns: 1fr !important; max-width: 380px !important; }
         }
       `}</style>
       <motion.h2
@@ -266,7 +279,7 @@ function UniversiSection() {
           lineHeight: 1.7,
         }}
       >
-        Tre stili, tre esperienze dal vivo. Concept interattivi firmati DIOBO — entra e scegli il tuo.
+        Tre stili, tre esperienze dal vivo — più un progetto reale già online. Entra e scegli il tuo.
       </motion.p>
 
       <div className="universes-grid" style={{
@@ -326,6 +339,60 @@ function UniversiSection() {
           </motion.a>
         ))}
       </div>
+
+      <motion.a
+        href="https://www.freedombonsai.com"
+        target="_blank"
+        rel="noopener"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6, type: "spring", damping: 20 }}
+        whileHover={{ y: -6, boxShadow: "0 10px 50px rgba(34,197,94,0.25)" }}
+        className="case-card"
+        style={{
+          display: "grid", gridTemplateColumns: "200px 1fr", alignItems: "stretch",
+          marginTop: "1.5rem", maxWidth: "1000px", width: "100%",
+          textDecoration: "none", background: "rgba(5,5,20,0.9)",
+          border: "1px solid rgba(34,197,94,0.3)", borderRadius: "16px", overflow: "hidden",
+        }}
+      >
+        <div style={{
+          minHeight: "150px",
+          background: "radial-gradient(circle at 50% 70%, rgba(34,197,94,0.55), transparent 65%), radial-gradient(circle at 30% 30%, rgba(132,204,22,0.3), transparent 60%), #03100a",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          fontSize: "3.5rem",
+        }} aria-hidden="true">
+          🌱
+        </div>
+        <div style={{ padding: "1.5rem" }}>
+          <p style={{
+            fontFamily: "var(--font-orbitron)", fontSize: "0.62rem",
+            letterSpacing: "0.3em", color: "#4ade80", marginBottom: "0.5rem",
+            textTransform: "uppercase",
+          }}>
+            Progetto reale · online
+          </p>
+          <h3 style={{
+            fontFamily: "var(--font-orbitron)", fontSize: "1.25rem", fontWeight: 700,
+            color: "#e0e7ff", marginBottom: "0.6rem",
+          }}>
+            FreedomBonsai
+          </h3>
+          <p style={{
+            fontFamily: "var(--font-exo2)", fontSize: "0.9rem", lineHeight: 1.6,
+            color: "#e0e7ff", opacity: 0.75, marginBottom: "1rem",
+          }}>
+            Sito del movimento di liberazione dei bonsai: dominio, sito, hosting ed email configurati end-to-end da DIOBO.
+          </p>
+          <span style={{
+            fontFamily: "var(--font-orbitron)", fontSize: "0.7rem",
+            letterSpacing: "0.2em", color: "#4ade80",
+          }}>
+            VISITA IL SITO →
+          </span>
+        </div>
+      </motion.a>
     </div>
   );
 }
@@ -427,6 +494,17 @@ function GlowCard({ service, index }: { service: typeof services[0]; index: numb
             position: "relative",
           }}>
             {service.desc}
+          </p>
+          <p style={{
+            marginTop: "1rem",
+            fontFamily: "var(--font-orbitron)",
+            fontSize: "0.8rem",
+            letterSpacing: "0.15em",
+            color: "#a5b4fc",
+            textTransform: "uppercase",
+            position: "relative",
+          }}>
+            {service.price}
           </p>
         </div>
       </motion.div>
@@ -627,6 +705,24 @@ export default function Home() {
             Il tuo universo digitale
           </motion.p>
 
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.6 }}
+            style={{
+              fontSize: "clamp(0.95rem, 1.6vw, 1.15rem)",
+              color: "#e0e7ff",
+              textAlign: "center",
+              maxWidth: "620px",
+              marginTop: "1.5rem",
+              lineHeight: 1.7,
+              fontFamily: "var(--font-exo2)",
+            }}
+          >
+            Dal server al sito: siti web, assistenza IT, domini ed email professionali a Bologna.
+            <br />Un sistemista vero che costruisce anche il web.
+          </motion.p>
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -701,6 +797,75 @@ export default function Home() {
         </div>
 
         <Marquee />
+
+        <GlowSeparator />
+
+        {/* PERCHÉ DIOBO */}
+        <div style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          padding: "6rem 2rem",
+        }}>
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, type: "spring", damping: 20 }}
+            style={{
+              fontFamily: "var(--font-orbitron)",
+              fontSize: "clamp(1.5rem, 4vw, 3rem)",
+              fontWeight: 700,
+              textAlign: "center",
+              marginBottom: "3rem",
+              textShadow: "0 0 20px rgba(99,102,241,0.3)",
+            }}
+          >
+            PERCHÉ <span style={{ color: "#6366f1" }}>DIOBO</span>
+          </motion.h2>
+          <div className="why-grid" style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: "1.5rem",
+            maxWidth: "1000px",
+            width: "100%",
+          }}>
+            {whyPoints.map((w, i) => (
+              <motion.div
+                key={w.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: i * 0.12, type: "spring", damping: 20 }}
+                style={{
+                  background: "rgba(5,5,20,0.85)",
+                  border: "1px solid rgba(99,102,241,0.25)",
+                  borderRadius: "16px",
+                  padding: "1.8rem",
+                }}
+              >
+                <h3 style={{
+                  fontFamily: "var(--font-orbitron)",
+                  fontSize: "1rem",
+                  fontWeight: 700,
+                  color: "#a5b4fc",
+                  marginBottom: "0.8rem",
+                  letterSpacing: "0.05em",
+                }}>
+                  {w.title}
+                </h3>
+                <p style={{
+                  fontFamily: "var(--font-exo2)",
+                  fontSize: "0.95rem",
+                  lineHeight: 1.7,
+                  color: "#e0e7ff",
+                }}>
+                  {w.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
 
         <GlowSeparator />
 
@@ -786,7 +951,7 @@ export default function Home() {
           </motion.p>
 
           <motion.a
-            href="mailto:dioboinfo@gmail.com"
+            href={CONTACT_MAILTO}
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
