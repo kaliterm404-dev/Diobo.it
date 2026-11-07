@@ -145,7 +145,7 @@ export default function DemoWow() {
             Raccontaci la tua idea.<br />Noi la trasformiamo in qualcosa di spettacolare.
           </motion.p>
           <motion.a
-            href="mailto:dioboinfo@gmail.com"
+            href="mailto:info@diobo.it"
             whileHover={{ scale: 1.08, boxShadow: "0 0 60px rgba(167,139,250,0.7)" }}
             whileTap={{ scale: 0.95 }}
             className="cta-button"

@@ -46,7 +46,7 @@ function CursorGlow() {
 }
 
 const CONTACT_MAILTO =
-  "mailto:dioboinfo@gmail.com?subject=" +
+  "mailto:info@diobo.it?subject=" +
   encodeURIComponent("Richiesta informazioni da diobo.it") +
   "&body=" +
   encodeURIComponent("Ciao, vorrei informazioni su:\n\n- Servizio (sito / assistenza IT / dominio ed email / grafica):\n- Due righe sul progetto:\n- Come preferite ricontattarmi:\n");

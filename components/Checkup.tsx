@@ -85,7 +85,7 @@ function buildMailto(res: Result) {
     "Telefono (facoltativo):",
   ];
   return (
-    "mailto:dioboinfo@gmail.com?subject=" +
+    "mailto:info@diobo.it?subject=" +
     encodeURIComponent(`Check-up ${res.host} — ${res.score}/100`) +
     "&body=" +
     encodeURIComponent(lines.join("\n"))

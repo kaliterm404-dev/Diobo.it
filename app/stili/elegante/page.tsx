@@ -229,7 +229,7 @@ export default function DemoElegante() {
             Iniziamo
           </motion.p>
           <motion.a
-            href="mailto:dioboinfo@gmail.com"
+            href="mailto:info@diobo.it"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

@@ -65,7 +65,7 @@ export default function RootLayout({
                 "url": "https://www.diobo.it",
                 "logo": "https://www.diobo.it/logo.png",
                 "description": "Creiamo siti web spettacolari, registriamo domini facili da ricordare, progettiamo loghi unici e offriamo consulenza informatica completa.",
-                "email": "dioboinfo@gmail.com",
+                "email": "info@diobo.it",
                 "areaServed": {
                   "@type": "City",
                   "name": "Bologna",
@@ -83,7 +83,7 @@ export default function RootLayout({
                 "@id": "https://www.diobo.it/#localbusiness",
                 "name": "DIOBO.IT",
                 "url": "https://www.diobo.it",
-                "email": "dioboinfo@gmail.com",
+                "email": "info@diobo.it",
                 "image": "https://www.diobo.it/logo.png",
                 "description": "Siti web, domini, grafica e consulenza IT a Bologna. Creiamo esperienze digitali che lasciano il segno.",
                 "address": {

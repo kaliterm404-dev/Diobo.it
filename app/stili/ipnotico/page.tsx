@@ -131,7 +131,7 @@ export default function DemoIpnotico() {
             </span>
           </motion.h2>
           <motion.a
-            href="mailto:dioboinfo@gmail.com"
+            href="mailto:info@diobo.it"
             whileHover={{ scale: 1.06, boxShadow: "0 0 70px rgba(129,140,248,0.6)" }}
             whileTap={{ scale: 0.96 }}
             className="cta-button"
