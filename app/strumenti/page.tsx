@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <h1 className="tools-title">La cassetta del sistemista</h1>
-      <p className="tools-lead">Gli strumenti di rete che cerchi sempre e non trovi mai. Gratis, senza pubblicità, senza registrazione. Usabili anche dagli assistenti AI tramite il nostro server MCP.</p>
+      <p className="tools-lead">Gli strumenti di rete che cerchi sempre e non trovi mai. Gratis, senza pubblicità, senza registrazione. Funzionano anche dentro gli assistenti AI come Claude e ChatGPT: li abbiamo collegati via MCP, lo standard che fa parlare l'intelligenza artificiale con gli strumenti esterni.</p>
       <div className="tool-grid">
         {TOOLS.map((t) => (
           <Link key={t.slug} href={`/strumenti/${t.slug}`}>

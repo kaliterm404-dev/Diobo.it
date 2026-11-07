@@ -6,6 +6,7 @@ import { Monitor, Globe, Palette, Layout } from "lucide-react";
 import dynamic from "next/dynamic";
 
 import Checkup from "@/components/Checkup";
+import { TOOLS } from "@/lib/tools";
 
 const SpaceScene = dynamic(() => import("@/components/SpaceScene"), { ssr: false });
 
@@ -151,14 +152,7 @@ function Marquee() {
             }}
           >
             {item}
-            <span style={{
-              display: "inline-block",
-              width: "4px",
-              height: "4px",
-              borderRadius: "50%",
-              background: "#6366f1",
-              opacity: 0.4,
-            }} />
+            <span style={{ color: "#6366f1", opacity: 0.5 }}> · </span>
           </span>
         ))}
       </motion.div>
@@ -808,6 +802,57 @@ export default function Home() {
         {/* CHECK-UP GRATUITO */}
         <Checkup />
 
+        {/* CASSETTA DEL SISTEMISTA */}
+        <section style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "4rem 1.5rem 6rem" }}>
+          <motion.p
+            initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
+            style={{ fontFamily: "var(--font-orbitron)", fontSize: "0.7rem", letterSpacing: "0.35em", color: "#818cf8", marginBottom: "1rem", textTransform: "uppercase", textAlign: "center" }}
+          >
+            Gratis · senza registrazione · senza pubblicità
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+            transition={{ duration: 0.8, type: "spring", damping: 20 }}
+            style={{ fontFamily: "var(--font-orbitron)", fontSize: "clamp(1.5rem, 4vw, 3rem)", fontWeight: 700, textAlign: "center", marginBottom: "1rem", textShadow: "0 0 20px rgba(99,102,241,0.3)" }}
+          >
+            LA CASSETTA DEL <span style={{ color: "#6366f1" }}>SISTEMISTA</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
+            style={{ fontFamily: "var(--font-exo2)", fontSize: "1.05rem", color: "#e0e7ff", opacity: 0.85, textAlign: "center", maxWidth: "640px", marginBottom: "2.5rem", lineHeight: 1.7 }}
+          >
+            Gli stessi strumenti che usiamo ogni giorno per tenere in piedi reti, domini e posta. Aperti a tutti, gratis: perché dietro DIOBO c&apos;è un sistemista, non un template.
+          </motion.p>
+          <div className="tool-grid" style={{ maxWidth: "1000px", width: "100%" }}>
+            {TOOLS.map((t, i) => (
+              <motion.a
+                key={t.slug}
+                href={`/strumenti/${t.slug}`}
+                initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: i * 0.06 }}
+                whileHover={{ y: -6 }}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <div className="tool-card" style={{ height: "100%", marginBottom: 0 }}>
+                  <h3 style={{ fontFamily: "var(--font-orbitron)", fontSize: "0.85rem", letterSpacing: "0.1em", color: "#a5b4fc", margin: "0 0 0.6rem", textTransform: "uppercase" }}>{t.name}</h3>
+                  <p style={{ margin: 0, color: "#c7d2fe", fontFamily: "var(--font-exo2)", lineHeight: 1.6 }}>{t.short}</p>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+          <p style={{ marginTop: "1.5rem", fontFamily: "var(--font-exo2)", color: "#a0a0c0", textAlign: "center", maxWidth: "640px", lineHeight: 1.6 }}>
+            Funzionano anche dentro gli assistenti AI come Claude e ChatGPT: li abbiamo collegati via MCP, lo standard che fa parlare l&apos;intelligenza artificiale con gli strumenti esterni.
+          </p>
+          <motion.a
+            href="/strumenti"
+            whileHover={{ scale: 1.06, boxShadow: "0 0 40px rgba(99,102,241,0.6)" }}
+            whileTap={{ scale: 0.95 }}
+            style={{ marginTop: "1.5rem", padding: "1rem 2.4rem", borderRadius: "50px", textDecoration: "none", background: "linear-gradient(135deg, #6366f1, #8b5cf6)", color: "#fff", fontFamily: "var(--font-orbitron)", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em" }}
+          >
+            APRI LA CASSETTA →
+          </motion.a>
+        </section>
+
         <GlowSeparator />
 
         {/* SERVIZI */}
@@ -1055,7 +1100,7 @@ export default function Home() {
             marginTop: "0.5rem",
             fontFamily: "var(--font-exo2)",
           }}>
-            © 2026 — Il tuo universo digitale · <a href="/strumenti" style={{ color: "#818cf8" }}>Strumenti di rete</a> · <a href="mailto:info@diobo.it" style={{ color: "#818cf8" }}>info@diobo.it</a>
+            © 2026 — Il tuo universo digitale · <a href="/strumenti" style={{ color: "#818cf8" }}>Strumenti di rete</a> · <a href="mailto:info@diobo.it" style={{ color: "#818cf8" }}>info@diobo.it</a> · <a href="/privacy" style={{ color: "#818cf8" }}>Privacy</a>
           </p>
         </footer>
       </div>
