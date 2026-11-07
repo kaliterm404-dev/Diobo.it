@@ -50,9 +50,6 @@ export default function Page() {
   return (
     <main className="tools-page" style={{ lineHeight: 1.75, maxWidth: 820 }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
-      <Link href="/" style={{ color: "#818cf8", textDecoration: "none", fontFamily: "var(--font-orbitron)", letterSpacing: ".15em", fontSize: ".85rem" }}>
-        DIOBO<span style={{ color: "#6366f1" }}>.IT</span>
-      </Link>
       <p style={{ color: "#818cf8", fontSize: ".85rem", margin: "1.5rem 0 0" }}>Guide · posta elettronica · 7 novembre 2026</p>
       <h1 className="tools-title">{TITLE}</h1>
       <p className="tools-lead">

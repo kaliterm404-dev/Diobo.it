@@ -27,9 +27,6 @@ export default function Page() {
   return (
     <main className="tools-page" style={{ lineHeight: 1.75 }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
-      <Link href="/" style={{ color: "#818cf8", textDecoration: "none", fontFamily: "var(--font-orbitron)", letterSpacing: ".15em", fontSize: ".85rem" }}>
-        DIOBO<span style={{ color: "#6366f1" }}>.IT</span>
-      </Link>
       <h1 className="tools-title">Chi c&apos;è dietro DIOBO</h1>
       <p className="tools-lead">
         Un sistemista di Bologna con oltre vent&apos;anni su server, reti e infrastrutture: laboratori, impianti, CED e lavoro sul campo, in aziende e per clienti in tutta Italia. DIOBO nasce per portare lo stesso metodo a chi ha un&apos;attività e un sito da far funzionare davvero.

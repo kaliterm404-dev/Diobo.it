@@ -15,9 +15,6 @@ const H = ({ children }: { children: React.ReactNode }) => (
 export default function Page() {
   return (
     <main className="tools-page" style={{ lineHeight: 1.7 }}>
-      <Link href="/" style={{ color: "#818cf8", textDecoration: "none", fontFamily: "var(--font-orbitron)", letterSpacing: ".15em", fontSize: ".85rem" }}>
-        DIOBO<span style={{ color: "#6366f1" }}>.IT</span>
-      </Link>
       <h1 className="tools-title">Privacy</h1>
       <p className="tools-lead">Informativa breve ai sensi del Regolamento UE 2016/679 (GDPR). Ultimo aggiornamento: 7 novembre 2026.</p>
 

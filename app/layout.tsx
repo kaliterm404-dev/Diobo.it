@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Orbitron, Exo_2 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import SiteNav from "@/components/SiteNav";
 
 const orbitron = Orbitron({
   variable: "--font-orbitron",
@@ -137,6 +138,7 @@ export default function RootLayout({
             ]
           }) }}
         />
+        <SiteNav />
         {children}<Analytics />
       </body>
     </html>

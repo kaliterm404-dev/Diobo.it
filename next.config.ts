@@ -9,6 +9,10 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    // vecchie pagine "stili" (concept 3D rimossi): redirect permanente alla home
+    return [{ source: "/stili/:path*", destination: "/", permanent: true }];
+  },
   async headers() {
     return [{ source: "/(.*)", headers: securityHeaders }];
   },
