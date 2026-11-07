@@ -53,10 +53,16 @@ const CONTACT_MAILTO =
   encodeURIComponent("Ciao, vorrei informazioni su:\n\n- Servizio (sito / assistenza IT / dominio ed email / grafica):\n- Due righe sul progetto:\n- Come preferite ricontattarmi:\n");
 
 const services = [
-  { icon: Layout, title: "Siti Web", desc: "Dal one-page al sito completo. Veloci, sicuri e su hosting moderno, di serie.", price: "da 390 €" },
-  { icon: Monitor, title: "Assistenza IT", desc: "Reti, server, backup e sicurezza. Dal server al singolo dispositivo, a intervento o in canone.", price: "da 49 €/mese" },
-  { icon: Globe, title: "Dominio + Email pro", desc: "Un nome facile da ricordare e caselle email professionali @tuonome, configurate a regola d'arte.", price: "su preventivo" },
-  { icon: Palette, title: "Grafica & Logo", desc: "Un'identità visiva distintiva, semplice ed elegante. Riconoscibile al primo sguardo.", price: "su preventivo" },
+  { icon: Layout, title: "Siti Web", desc: "Dal one-page al sito completo. Veloci, sicuri e su hosting moderno, di serie.", price: "da 390 €",
+    includes: ["Sito one-page adatto a smartphone, tablet e PC", "HTTPS con certificato automatico", "Configurazione di dominio e DNS", "Google: title, descrizioni, dati strutturati, sitemap e Search Console", "Header di sicurezza", "Check-up DIOBO con report alla consegna", "Un giro di modifiche incluso"],
+    note: "Costi annui di dominio e hosting a parte." },
+  { icon: Monitor, title: "Assistenza IT", desc: "Reti, server, backup e sicurezza. Dal server al singolo dispositivo, a intervento o in canone.", price: "da 49 €/mese",
+    includes: ["Monitoraggio di sito e servizi", "Verifica mensile di backup, certificati, DNS e posta", "Aggiornamenti di sicurezza programmati", "Supporto via email, risposta entro il giorno lavorativo successivo", "Report mensile"],
+    note: "Interventi sul posto a Bologna e provincia su preventivo." },
+  { icon: Globe, title: "Dominio + Email pro", desc: "Un nome facile da ricordare e caselle email professionali @tuonome, configurate a regola d'arte.", price: "su preventivo",
+    includes: ["Registrazione o trasferimento del dominio", "Caselle @tuodominio", "SPF, DKIM e DMARC configurati e verificati", "Migrazione della posta esistente"] },
+  { icon: Palette, title: "Grafica & Logo", desc: "Un'identità visiva distintiva, semplice ed elegante. Riconoscibile al primo sguardo.", price: "su preventivo",
+    includes: ["Logo con varianti (orizzontale, icona, bianco/nero)", "Palette colori e font", "File pronti per web e stampa"] },
 ];
 
 const whyPoints = [
@@ -502,6 +508,16 @@ function GlowCard({ service, index }: { service: typeof services[0]; index: numb
           }}>
             {service.price}
           </p>
+          <ul style={{ listStyle: "none", padding: 0, margin: "1rem 0 0", textAlign: "left", position: "relative" }}>
+            {service.includes.map((it) => (
+              <li key={it} style={{ fontFamily: "var(--font-exo2)", fontSize: "0.85rem", color: "#c7d2fe", lineHeight: 1.5, marginBottom: "0.3rem", paddingLeft: "1.1rem", position: "relative" }}>
+                <span style={{ position: "absolute", left: 0, color: "#818cf8" }}>✓</span>{it}
+              </li>
+            ))}
+          </ul>
+          {service.note && (
+            <p style={{ fontFamily: "var(--font-exo2)", fontSize: "0.75rem", color: "#818cf8", marginTop: "0.6rem", position: "relative", textAlign: "left" }}>{service.note}</p>
+          )}
         </div>
       </motion.div>
     </motion.div>
@@ -1100,7 +1116,7 @@ export default function Home() {
             marginTop: "0.5rem",
             fontFamily: "var(--font-exo2)",
           }}>
-            © 2026 — Il tuo universo digitale · <a href="/strumenti" style={{ color: "#818cf8" }}>Strumenti di rete</a> · <a href="mailto:info@diobo.it" style={{ color: "#818cf8" }}>info@diobo.it</a> · <a href="/privacy" style={{ color: "#818cf8" }}>Privacy</a>
+            © 2026 — Il tuo universo digitale · <a href="/strumenti" style={{ color: "#818cf8" }}>Strumenti di rete</a> · <a href="mailto:info@diobo.it" style={{ color: "#818cf8" }}>info@diobo.it</a> · <a href="/chi-siamo" style={{ color: "#818cf8" }}>Chi siamo</a> · <a href="/guide/spf-dkim-dmarc" style={{ color: "#818cf8" }}>Guida SPF/DKIM/DMARC</a> · <a href="/privacy" style={{ color: "#818cf8" }}>Privacy</a>
           </p>
         </footer>
       </div>

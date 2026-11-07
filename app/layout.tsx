@@ -72,10 +72,12 @@ export default function RootLayout({
                   "containedInPlace": { "@type": "Country", "name": "Italia" }
                 },
                 "knowsAbout": [
-                  "Web Design", "Sviluppo Siti Web", "Consulenza IT",
-                  "Registrazione Domini", "Grafica", "Logo Design",
-                  "Assistenza Informatica", "Web Development"
+                  "Sviluppo siti web", "Next.js", "Hosting", "DNS", "Email deliverability", "SPF", "DKIM", "DMARC",
+                  "Certificati SSL/TLS", "Assistenza informatica", "Amministrazione di sistema", "Virtualizzazione VMware e Proxmox",
+                  "Reti aziendali e VLAN", "Firewall e VPN", "Windows Server e Active Directory", "Microsoft 365",
+                  "Backup e disaster recovery", "Monitoraggio Zabbix", "Grafica e logo design"
                 ],
+                "slogan": "Dal server al sito",
                 "sameAs": []
               },
               {
@@ -93,6 +95,13 @@ export default function RootLayout({
                   "addressCountry": "IT"
                 },
                 "priceRange": "€€",
+                "areaServed": [
+                  { "@type": "City", "name": "Bologna" },
+                  { "@type": "AdministrativeArea", "name": "Emilia-Romagna" },
+                  { "@type": "Country", "name": "Italia" }
+                ],
+                "knowsLanguage": "it",
+                "contactPoint": { "@type": "ContactPoint", "email": "info@diobo.it", "contactType": "customer service", "availableLanguage": "Italian" },
                 "hasOfferCatalog": {
                   "@type": "OfferCatalog",
                   "name": "Servizi Digitali",
@@ -103,11 +112,11 @@ export default function RootLayout({
                     },
                     {
                       "@type": "Offer",
-                      "itemOffered": { "@type": "Service", "name": "Registrazione Domini", "description": "Domini semplici da ricordare" }
+                      "itemOffered": { "@type": "Service", "name": "Dominio ed email professionale", "description": "Registrazione dominio, caselle @tuodominio, configurazione SPF, DKIM e DMARC per non finire in spam" }
                     },
                     {
                       "@type": "Offer",
-                      "itemOffered": { "@type": "Service", "name": "Grafica e Logo Design", "description": "Logo distintivo, rappresentativo ed unico. Grafica semplice ed elegante" }
+                      "itemOffered": { "@type": "Service", "name": "Grafica e logo", "description": "Identità visiva distintiva, semplice ed elegante" }
                     },
                     {
                       "@type": "Offer",

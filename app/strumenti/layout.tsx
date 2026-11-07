@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </nav>
       {children}
       <p className="tool-cta">
-        Problemi con DNS, posta o certificati? <Link href="/#checkup">Fai il check-up completo del tuo sito</Link> oppure scrivici a <a href="mailto:info@diobo.it">info@diobo.it</a>. · <Link href="/privacy">Privacy</Link>
+        Problemi con DNS, posta o certificati? <Link href="/#checkup">Fai il check-up completo del tuo sito</Link> oppure scrivici a <a href="mailto:info@diobo.it">info@diobo.it</a>. · <Link href="/chi-siamo">Chi siamo</Link> · <Link href="/guide/spf-dkim-dmarc">Guida SPF/DKIM/DMARC</Link> · <Link href="/privacy">Privacy</Link>
       </p>
     </div>
   );

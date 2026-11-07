@@ -1,6 +1,6 @@
 # DIOBO.IT
 
-> DIOBO.IT è uno studio IT di Bologna: siti web, assistenza IT e sistemistica, domini ed email professionali, grafica. "Dal server al sito": un sistemista che costruisce anche il web. Contatto: info@diobo.it.
+> DIOBO.IT è il progetto di un sistemista di Bologna con oltre 20 anni di esperienza (server, reti, virtualizzazione, Microsoft 365, backup) che costruisce anche siti web. Servizi: siti web (da 390 €), assistenza IT e sistemistica (da 49 €/mese), dominio ed email professionale con SPF/DKIM/DMARC, grafica e logo. Bologna e provincia di persona, resto d'Italia da remoto. Contatto: info@diobo.it.
 
 Il sito offre strumenti di rete gratuiti, senza registrazione, utilizzabili da persone e da assistenti AI.
 
@@ -22,6 +22,11 @@ Il sito offre strumenti di rete gratuiti, senza registrazione, utilizzabili da p
 - `POST https://www.diobo.it/api/tools/mondo` body `{"target":"esempio.it","type":"dns|ping|http|traceroute","record":"A"}`
 - `POST https://www.diobo.it/api/checkup` body `{"domain":"esempio.it"}`
 - `GET  https://www.diobo.it/api/tools/ip`
+
+## Chi siamo e guide
+
+- [Chi c'è dietro DIOBO](https://www.diobo.it/chi-siamo): esperienza, ambiti tecnici, come usiamo l'AI.
+- [Guida SPF, DKIM e DMARC](https://www.diobo.it/guide/spf-dkim-dmarc): perché le email finiscono in spam, errori comuni (doppio SPF, limite 10 lookup, p=none) e sequenza corretta di attivazione.
 
 ## Servizi
 
