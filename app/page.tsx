@@ -746,6 +746,18 @@ export default function Home() {
               CHECK-UP GRATUITO DEL TUO SITO
             </motion.a>
             <motion.a
+              href="/strumenti"
+              whileHover={{ scale: 1.06, borderColor: "rgba(165,180,252,0.9)" }}
+              whileTap={{ scale: 0.95 }}
+              style={{
+                padding: "1rem 2.2rem", borderRadius: "50px", textDecoration: "none",
+                border: "1px solid rgba(99,102,241,0.5)", color: "#e0e7ff", background: "rgba(5,5,20,0.6)",
+                fontFamily: "var(--font-orbitron)", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em",
+              }}
+            >
+              STRUMENTI DI RETE
+            </motion.a>
+            <motion.a
               href={CONTACT_MAILTO}
               whileHover={{ scale: 1.06, borderColor: "rgba(165,180,252,0.9)" }}
               whileTap={{ scale: 0.95 }}
@@ -1043,7 +1055,7 @@ export default function Home() {
             marginTop: "0.5rem",
             fontFamily: "var(--font-exo2)",
           }}>
-            © 2026 — Il tuo universo digitale
+            © 2026 — Il tuo universo digitale · <a href="/strumenti" style={{ color: "#818cf8" }}>Strumenti di rete</a> · <a href="mailto:info@diobo.it" style={{ color: "#818cf8" }}>info@diobo.it</a>
           </p>
         </footer>
       </div>

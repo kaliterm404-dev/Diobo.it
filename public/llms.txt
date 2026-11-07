@@ -1,0 +1,36 @@
+# DIOBO.IT
+
+> DIOBO.IT è uno studio IT di Bologna: siti web, assistenza IT e sistemistica, domini ed email professionali, grafica. "Dal server al sito": un sistemista che costruisce anche il web. Contatto: info@diobo.it.
+
+Il sito offre strumenti di rete gratuiti, senza registrazione, utilizzabili da persone e da assistenti AI.
+
+## Strumenti di rete (pagine)
+
+- [Propagazione DNS, ping, HTTP e traceroute dal mondo](https://www.diobo.it/strumenti/mondo): test da sonde reali in 26 paesi, con mappa.
+- [Qual è il mio IP](https://www.diobo.it/strumenti/ip): IP pubblico, IPv4/IPv6, reverse DNS, posizione indicativa.
+- [DNS lookup](https://www.diobo.it/strumenti/dns): record A, AAAA, CNAME, MX, NS, TXT, CAA, SOA; PTR per gli IP; confronto tra resolver.
+- [Verifica SPF, DKIM, DMARC](https://www.diobo.it/strumenti/mail): MX, SPF con conteggio dei lookup DNS (limite 10), DKIM sui selettori comuni, DMARC spiegato.
+- [Certificato SSL/TLS](https://www.diobo.it/strumenti/ssl): validità, scadenza, emittente, SAN, versione TLS, catena.
+- [Calcolatore subnet IPv4/IPv6](https://www.diobo.it/strumenti/subnet): rete, maschera, broadcast, range host.
+- [Check-up completo di un sito](https://www.diobo.it/#checkup): punteggio 0-100 su sicurezza, email, velocità e visibilità.
+
+## API JSON (POST, Content-Type: application/json, CORS aperto, rate limit per IP)
+
+- `POST https://www.diobo.it/api/tools/dns` body `{"domain":"esempio.it"}`
+- `POST https://www.diobo.it/api/tools/mail` body `{"domain":"esempio.it","selector":"opzionale"}`
+- `POST https://www.diobo.it/api/tools/ssl` body `{"host":"www.esempio.it"}`
+- `POST https://www.diobo.it/api/tools/mondo` body `{"target":"esempio.it","type":"dns|ping|http|traceroute","record":"A"}`
+- `POST https://www.diobo.it/api/checkup` body `{"domain":"esempio.it"}`
+- `GET  https://www.diobo.it/api/tools/ip`
+
+## Servizi
+
+- [Home e servizi](https://www.diobo.it/): siti web da 390 €, assistenza IT da 49 €/mese, dominio + email pro e grafica su preventivo.
+
+## Server MCP (per assistenti AI)
+
+Endpoint Model Context Protocol pubblico, senza autenticazione (Streamable HTTP, stateless):
+`https://www.diobo.it/mcp`
+
+Strumenti: `dns_lookup`, `email_security_check`, `ssl_certificate_check`, `global_network_test` (propagazione DNS, ping, HTTP, traceroute da 26 paesi), `website_checkup`.
+Esempio Claude Code: `claude mcp add --transport http diobo https://www.diobo.it/mcp`
