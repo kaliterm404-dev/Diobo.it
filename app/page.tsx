@@ -54,15 +54,15 @@ const CONTACT_MAILTO =
 
 const services = [
   { icon: Layout, title: "Siti Web", desc: "Dal one-page al sito completo. Veloci, sicuri e su hosting moderno, di serie.", price: "da 390 €",
-    includes: ["Sito one-page adatto a smartphone, tablet e PC", "HTTPS con certificato automatico", "Configurazione di dominio e DNS", "Google: title, descrizioni, dati strutturati, sitemap e Search Console", "Header di sicurezza", "Check-up DIOBO con report alla consegna", "Un giro di modifiche incluso"],
-    note: "Costi annui di dominio e hosting a parte." },
+    includes: ["Sito one-page adatto a smartphone, tablet e PC", "HTTPS con certificato automatico", "Dominio e DNS configurati", "Ottimizzazione Google: titoli, descrizioni, dati strutturati, sitemap, Search Console", "Header di sicurezza", "Check-up DIOBO con report alla consegna", "Un giro di revisioni incluso"],
+    note: "Dominio e hosting: costi annui a parte." },
   { icon: Monitor, title: "Assistenza IT", desc: "Reti, server, backup e sicurezza. Dal server al singolo dispositivo, a intervento o in canone.", price: "da 49 €/mese",
-    includes: ["Monitoraggio di sito e servizi", "Verifica mensile di backup, certificati, DNS e posta", "Aggiornamenti di sicurezza programmati", "Supporto via email, risposta entro il giorno lavorativo successivo", "Report mensile"],
-    note: "Interventi sul posto a Bologna e provincia su preventivo." },
+    includes: ["Monitoraggio di sito e servizi", "Controllo mensile di backup, certificati, DNS e posta", "Aggiornamenti di sicurezza programmati", "Supporto via email con risposta entro 1 giorno lavorativo", "Report mensile"],
+    note: "Interventi on-site (Bologna e provincia): su preventivo." },
   { icon: Globe, title: "Dominio + Email pro", desc: "Un nome facile da ricordare e caselle email professionali @tuonome, configurate a regola d'arte.", price: "su preventivo",
-    includes: ["Registrazione o trasferimento del dominio", "Caselle @tuodominio", "SPF, DKIM e DMARC configurati e verificati", "Migrazione della posta esistente"] },
+    includes: ["Registrazione o trasferimento del dominio", "Caselle email @tuonome", "SPF, DKIM e DMARC configurati e verificati", "Migrazione della posta esistente"] },
   { icon: Palette, title: "Grafica & Logo", desc: "Un'identità visiva distintiva, semplice ed elegante. Riconoscibile al primo sguardo.", price: "su preventivo",
-    includes: ["Logo con varianti (orizzontale, icona, bianco/nero)", "Palette colori e font", "File pronti per web e stampa"] },
+    includes: ["Logo con varianti", "Palette colori e tipografia", "File pronti per web e stampa"] },
 ];
 
 const whyPoints = [
