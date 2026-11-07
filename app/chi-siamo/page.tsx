@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Chi c'è dietro DIOBO.IT — un sistemista, non un'agenzia | DIOBO.IT",
-  description: "DIOBO.IT è il progetto di un sistemista di Bologna con oltre 20 anni di esperienza su server, reti, virtualizzazione e Microsoft 365, che costruisce anche siti web.",
+  description: "DIOBO.IT è il progetto di un sistemista di Bologna con oltre vent'anni di esperienza su server, reti, virtualizzazione e Microsoft 365, che costruisce anche siti web.",
   alternates: { canonical: "https://www.diobo.it/chi-siamo" },
 };
 
@@ -32,7 +32,7 @@ export default function Page() {
       </Link>
       <h1 className="tools-title">Chi c&apos;è dietro DIOBO</h1>
       <p className="tools-lead">
-        Un sistemista di Bologna. Oltre vent&apos;anni passati su server, reti e infrastrutture: prima nei laboratori e sugli impianti, poi nei CED e sul campo, oggi come unico responsabile IT di un&apos;azienda manifatturiera con più di cento dipendenti. DIOBO nasce per portare lo stesso metodo a chi ha un&apos;attività piccola e un sito da far funzionare davvero.
+        Un sistemista di Bologna con oltre vent&apos;anni su server, reti e infrastrutture: laboratori, impianti, CED e lavoro sul campo, in aziende e per clienti in tutta Italia. DIOBO nasce per portare lo stesso metodo a chi ha un&apos;attività e un sito da far funzionare davvero.
       </p>
 
       <H>Di cosa mi occupo ogni giorno</H>
@@ -47,8 +47,7 @@ export default function Page() {
 
       <H>Sul campo</H>
       <L items={[
-        "Reti di sensori e stazioni di monitoraggio in tutta Italia, anche in siti d'alta quota",
-        "Installazioni di server presso clienti all'estero",
+        "Installazione e manutenzione di reti e apparati presso clienti",
         "Diagnosi di guasti intermittenti di rete con analisi dei log e test sui cavi",
         "Supporto a macchinari di produzione e pannelli operatore",
       ]} />

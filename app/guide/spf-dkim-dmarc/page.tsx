@@ -78,7 +78,7 @@ export default function Page() {
 
       <H>DKIM: la firma digitale della mail</H>
       <P>Con DKIM il server che spedisce firma ogni messaggio con una chiave privata; la chiave pubblica sta nel DNS, sotto un &quot;selettore&quot;. Chi riceve verifica la firma e sa che il messaggio non è stato alterato e viene da un server autorizzato dal dominio.</P>
-      <Code>brevo1._domainkey.diobo.it  →  chiave pubblica DKIM</Code>
+      <Code>brevo1._domainkey.diobo.it  CNAME  →  chiave pubblica DKIM pubblicata da Brevo</Code>
       <P>Il nome prima di <code>._domainkey</code> è il selettore e lo sceglie il servizio di posta: <code>google</code> per Google Workspace, <code>selector1</code> e <code>selector2</code> per Microsoft 365, nomi propri per gli altri. Se il nostro strumento non trova DKIM, indica il selettore del tuo provider nel campo apposito.</P>
 
       <H>DMARC: cosa fare quando i controlli falliscono</H>
