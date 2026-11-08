@@ -10,6 +10,7 @@ const UPDATED: Record<string, string> = {
   "/guide": "2026-11-08",
   "/guide/spf-dkim-dmarc": "2026-11-07",
   "/guide/propagazione-dns": "2026-11-08",
+  "/guide/comandi-windows": "2026-11-08",
   "/chi-siamo": "2026-11-07",
   "/privacy": "2026-11-08",
 };
@@ -25,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     page("/guide", 0.7, "monthly"),
     page("/guide/spf-dkim-dmarc", 0.8, "yearly"),
     page("/guide/propagazione-dns", 0.8, "yearly"),
+    page("/guide/comandi-windows", 0.8, "monthly"),
     page("/chi-siamo", 0.6, "yearly"),
     page("/privacy", 0.2, "yearly"),
   ];

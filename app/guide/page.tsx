@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Guide tecniche: DNS, email, sicurezza del sito | DIOBO.IT",
-  description: "Guide pratiche scritte da un sistemista: propagazione DNS, SPF, DKIM e DMARC, con esempi reali e strumenti gratuiti per verificare.",
+  title: "Guide tecniche: DNS, email, comandi Windows | DIOBO.IT",
+  description: "Guide pratiche scritte da un sistemista: comandi utili di Windows, propagazione DNS, SPF, DKIM e DMARC, con esempi reali e strumenti gratuiti.",
   alternates: { canonical: "https://www.diobo.it/guide" },
-  openGraph: { title: "Guide tecniche di DIOBO.IT", description: "DNS, email, sicurezza del sito: guide pratiche con esempi reali.", url: "/guide", type: "website", locale: "it_IT" },
+  openGraph: { title: "Guide tecniche di DIOBO.IT", description: "DNS, email, Windows, sicurezza del sito: guide pratiche con esempi reali.", url: "/guide", type: "website", locale: "it_IT" },
 };
 
 const GUIDE = [
+  { href: "/guide/comandi-windows", title: "Comandi utili di Windows", desc: "Esegui, console .msc, pannello .cpl, cartelle rapide, ms-settings e comandi di rete e riparazione per Windows 10 e 11. Con ricerca e copia.", tool: { href: "/strumenti/ip", label: "Il mio IP" } },
   { href: "/guide/propagazione-dns", title: "Propagazione DNS: quanto dura e come controllarla", desc: "TTL, nameserver, registro .it, comandi per verificare e come cambiare senza disservizio.", tool: { href: "/strumenti/mondo", label: "Test dal mondo" } },
   { href: "/guide/spf-dkim-dmarc", title: "SPF, DKIM e DMARC: perché le email finiscono in spam", desc: "Cosa sono, errori comuni (doppio SPF, limite dei 10 lookup, p=none) e sequenza giusta per attivarli.", tool: { href: "/strumenti/mail", label: "Controllo email" } },
 ];
