@@ -26,7 +26,10 @@ Il sito offre strumenti di rete gratuiti, senza registrazione, utilizzabili da p
 ## Chi siamo e guide
 
 - [Chi c'è dietro DIOBO](https://www.diobo.it/chi-siamo): esperienza, ambiti tecnici, come usiamo l'AI.
+- [Guide](https://www.diobo.it/guide): indice delle guide tecniche.
 - [Guida SPF, DKIM e DMARC](https://www.diobo.it/guide/spf-dkim-dmarc): perché le email finiscono in spam, errori comuni (doppio SPF, limite 10 lookup, p=none) e sequenza corretta di attivazione.
+- [Guida propagazione DNS](https://www.diobo.it/guide/propagazione-dns): quanto dura (TTL, nameserver, registro .it), come controllarla, come cambiare DNS senza disservizio.
+- [Contatti](https://www.diobo.it/#contatti): modulo di contatto oppure email info@diobo.it. Bologna e provincia di persona, tutta Italia da remoto.
 
 ## Servizi
 

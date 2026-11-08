@@ -8,7 +8,7 @@ const LINKS = [
   { href: "/#servizi", label: "Servizi" },
   { href: "/#checkup", label: "Check-up" },
   { href: "/strumenti", label: "Strumenti" },
-  { href: "/guide/spf-dkim-dmarc", label: "Guide" },
+  { href: "/guide", label: "Guide" },
   { href: "/chi-siamo", label: "Chi siamo" },
 ];
 
@@ -44,7 +44,7 @@ export default function SiteNav() {
           {LINKS.map((l) => (
             <Link key={l.href} href={l.href} aria-current={active(l.href) ? "page" : undefined}>{l.label}</Link>
           ))}
-          <a href="mailto:info@diobo.it" className="site-nav__cta">Contatti</a>
+          <Link href="/#contatti" className="site-nav__cta">Contatti</Link>
         </nav>
       </div>
     </header>

@@ -8,7 +8,6 @@ const meta = toolBySlug("mondo");
 export const metadata: Metadata = {
   title: `${meta.title} | DIOBO.IT`,
   description: meta.description,
-  keywords: meta.keywords,
   alternates: { canonical: `https://www.diobo.it/strumenti/${meta.slug}` },
   openGraph: { title: meta.title, description: meta.description, url: `https://www.diobo.it/strumenti/${meta.slug}`, type: "website", locale: "it_IT" },
 };

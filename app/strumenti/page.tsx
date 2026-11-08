@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Strumenti di rete gratuiti: DNS, IP, SPF/DMARC, SSL, subnet | DIOBO.IT",
   description: "La cassetta del sistemista: propagazione DNS dal mondo, il mio IP, DNS lookup, verifica SPF/DKIM/DMARC, certificato SSL e calcolatore subnet. Gratis, senza pubblicità.",
   alternates: { canonical: "https://www.diobo.it/strumenti" },
+  openGraph: { title: "La cassetta del sistemista: strumenti di rete gratuiti", description: "Propagazione DNS dal mondo, il mio IP, DNS lookup, SPF/DKIM/DMARC, certificato SSL, calcolatore subnet. Gratis e senza pubblicità.", url: "/strumenti", type: "website", locale: "it_IT" },
 };
 
 export default function Page() {

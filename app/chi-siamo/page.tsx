@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Chi c'è dietro DIOBO.IT — un sistemista, non un'agenzia | DIOBO.IT",
   description: "DIOBO.IT è il progetto di un sistemista di Bologna con oltre vent'anni di esperienza su server, reti, virtualizzazione e Microsoft 365, che costruisce anche siti web.",
   alternates: { canonical: "https://www.diobo.it/chi-siamo" },
+  openGraph: { title: "Chi c'è dietro DIOBO.IT: un sistemista, non un'agenzia", description: "Oltre vent'anni su server, reti e infrastrutture. Il metodo del sistemista applicato ai siti web.", url: "/chi-siamo", type: "website", locale: "it_IT" },
 };
 
 const H = ({ children }: { children: React.ReactNode }) => (

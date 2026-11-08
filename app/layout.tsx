@@ -17,12 +17,12 @@ const exo2 = Exo_2({
 export const metadata: Metadata = {
   title: "DIOBO.IT — Siti Web e Assistenza IT a Bologna | Dal server al sito",
   description: "Siti web veloci e sicuri da 390 €, assistenza IT da 49 €/mese, domini ed email pro, grafica e logo a Bologna. Un sistemista vero che costruisce anche il web.",
-  keywords: ["diobo", "siti web bologna", "assistenza informatica bologna", "sistemista bologna", "email professionale", "web design bologna", "grafica bologna", "logo aziendale", "consulenza IT", "domini web", "realizzazione siti"],
   authors: [{ name: "DIOBO.IT" }],
+  metadataBase: new URL("https://www.diobo.it"),
   openGraph: {
-    title: "DIOBO.IT — Siti Web, Domini, Grafica",
-    description: "Creiamo esperienze digitali che lasciano il segno. Siti web, domini, grafica e consulenza IT a Bologna.",
-    url: "https://www.diobo.it",
+    title: "DIOBO.IT — Siti web e assistenza IT a Bologna, da un sistemista",
+    description: "Siti web, assistenza IT, domini ed email professionali a Bologna, da un sistemista vero che costruisce anche il web. Dal server al sito.",
+    url: "/",
     siteName: "DIOBO.IT",
     type: "website",
     locale: "it_IT",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DIOBO.IT — Siti Web, Domini, Grafica",
-    description: "Creiamo esperienze digitali che lasciano il segno. Bologna.",
+    title: "DIOBO.IT — Siti web e assistenza IT a Bologna, da un sistemista",
+    description: "Siti web, assistenza IT, domini ed email professionali a Bologna, da un sistemista vero che costruisce anche il web. Dal server al sito.",
     images: ["https://www.diobo.it/logo.png"],
   },
   verification: {
@@ -65,7 +65,7 @@ export default function RootLayout({
                 "name": "DIOBO.IT",
                 "url": "https://www.diobo.it",
                 "logo": "https://www.diobo.it/logo.png",
-                "description": "Creiamo siti web spettacolari, registriamo domini facili da ricordare, progettiamo loghi unici e offriamo consulenza informatica completa.",
+                "description": "Siti web, assistenza IT, domini ed email professionali a Bologna, da un sistemista vero che costruisce anche il web. Dal server al sito.",
                 "email": "info@diobo.it",
                 "areaServed": {
                   "@type": "City",
@@ -88,7 +88,7 @@ export default function RootLayout({
                 "url": "https://www.diobo.it",
                 "email": "info@diobo.it",
                 "image": "https://www.diobo.it/logo.png",
-                "description": "Siti web, domini, grafica e consulenza IT a Bologna. Creiamo esperienze digitali che lasciano il segno.",
+                "description": "Siti web, assistenza IT, domini ed email professionali a Bologna, da un sistemista vero che costruisce anche il web. Dal server al sito.",
                 "address": {
                   "@type": "PostalAddress",
                   "addressLocality": "Bologna",
@@ -131,7 +131,7 @@ export default function RootLayout({
                 "@id": "https://www.diobo.it/#website",
                 "name": "DIOBO.IT",
                 "url": "https://www.diobo.it",
-                "description": "Il tuo universo digitale",
+                "description": "Siti web, assistenza IT, domini ed email professionali a Bologna, da un sistemista vero che costruisce anche il web. Dal server al sito. Strumenti di rete gratuiti e server MCP pubblico.",
                 "publisher": { "@id": "https://www.diobo.it/#organization" },
                 "inLanguage": "it-IT"
               }

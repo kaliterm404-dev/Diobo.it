@@ -6,6 +6,7 @@ import { Monitor, Globe, Palette, Layout } from "lucide-react";
 import dynamic from "next/dynamic";
 
 import Checkup from "@/components/Checkup";
+import ContactForm from "@/components/ContactForm";
 import { TOOLS } from "@/lib/tools";
 
 const SpaceScene = dynamic(() => import("@/components/SpaceScene"), { ssr: false });
@@ -546,7 +547,7 @@ export default function Home() {
           justifyContent: "center",
           padding: "2rem",
         }}>
-          <motion.h1
+          <motion.div role="presentation"
             initial={{ opacity: 0, filter: "blur(20px)", scale: 0.95 }}
             animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
             transition={{ duration: 1.8, ease: "easeOut" }}
@@ -561,7 +562,7 @@ export default function Home() {
             }}
           >
             DIOBO<span style={{ color: "#6366f1" }}>.IT</span>
-          </motion.h1>
+          </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -581,7 +582,7 @@ export default function Home() {
             Il tuo universo digitale
           </motion.p>
 
-          <motion.p
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.6 }}
@@ -593,11 +594,12 @@ export default function Home() {
               marginTop: "1.5rem",
               lineHeight: 1.7,
               fontFamily: "var(--font-exo2)",
+              fontWeight: 400,
             }}
           >
             Dal server al sito. Siti web, assistenza IT, domini ed email professionali a Bologna —
             da un sistemista vero che costruisce anche il web.
-          </motion.p>
+          </motion.h1>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -632,7 +634,7 @@ export default function Home() {
               STRUMENTI DI RETE
             </motion.a>
             <motion.a
-              href={CONTACT_MAILTO}
+              href="#contatti"
               whileHover={{ scale: 1.06, borderColor: "rgba(165,180,252,0.9)" }}
               whileTap={{ scale: 0.95 }}
               style={{
@@ -883,14 +885,13 @@ export default function Home() {
 
         <GlowSeparator />
 
-        {/* CTA */}
-        <div style={{
-          minHeight: "80vh",
+        {/* CONTATTI */}
+        <section id="contatti" style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
-          padding: "4rem 2rem",
+          padding: "5rem 1.5rem 6rem",
+          scrollMarginTop: "4.5rem",
         }}>
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
@@ -899,66 +900,24 @@ export default function Home() {
             transition={{ duration: 0.8, type: "spring", damping: 20 }}
             style={{
               fontFamily: "var(--font-orbitron)",
-              fontSize: "clamp(2rem, 5vw, 4rem)",
+              fontSize: "clamp(1.8rem, 5vw, 3.4rem)",
               fontWeight: 900,
               textAlign: "center",
-              marginBottom: "2rem",
+              marginBottom: "1.2rem",
               textShadow: "0 0 30px rgba(99,102,241,0.4)",
             }}
           >
             CHIEDI E TI <span style={{ color: "#6366f1" }}>SARÀ DATO</span>
           </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            style={{
-              color: "#e0e7ff",
-              fontSize: "1.3rem",
-              textAlign: "center",
-              maxWidth: "500px",
-              marginBottom: "3rem",
-              fontFamily: "var(--font-exo2)",
-              fontWeight: 400,
-              lineHeight: 1.7,
-            }}
-          >
-            Raccontaci la tua idea.<br />Noi la trasformiamo in qualcosa di spettacolare.
-          </motion.p>
-
-          <motion.a
-            href={CONTACT_MAILTO}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            whileHover={{
-              scale: 1.08,
-              boxShadow: "0 0 40px rgba(99,102,241,0.6), 0 0 80px rgba(139,92,246,0.3), 0 0 120px rgba(99,102,241,0.15)",
-            }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", damping: 15, stiffness: 200 }}
-            className="cta-button"
-            style={{
-              display: "inline-block",
-              padding: "1.2rem 4rem",
-              background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
-              color: "#fff",
-              fontSize: "1.1rem",
-              fontWeight: 700,
-              fontFamily: "var(--font-orbitron)",
-              borderRadius: "50px",
-              textDecoration: "none",
-              letterSpacing: "0.1em",
-              boxShadow: "0 0 30px rgba(99,102,241,0.3)",
-              cursor: "pointer",
-              position: "relative",
-            }}
-          >
-            CONTATTACI
-          </motion.a>
-        </div>
+          <p style={{ color: "#e0e7ff", fontSize: "1.1rem", textAlign: "center", maxWidth: "560px", margin: "0 0 0.6rem", fontFamily: "var(--font-exo2)", lineHeight: 1.7 }}>
+            Raccontaci cosa ti serve, oppure scrivici direttamente:
+          </p>
+          <p style={{ textAlign: "center", margin: "0 0 2rem", fontFamily: "var(--font-exo2)" }}>
+            <a href={CONTACT_MAILTO} style={{ color: "#a5b4fc", fontSize: "1.2rem", textDecoration: "none", borderBottom: "1px solid rgba(165,180,252,0.5)" }}>info@diobo.it</a>
+            <span style={{ display: "block", color: "#818cf8", fontSize: "0.9rem", marginTop: "0.5rem" }}>Bologna e provincia di persona · tutta Italia da remoto</span>
+          </p>
+          <ContactForm />
+        </section>
 
         {/* FOOTER */}
         <footer style={{
@@ -980,7 +939,7 @@ export default function Home() {
             marginTop: "0.5rem",
             fontFamily: "var(--font-exo2)",
           }}>
-            © 2026 — Il tuo universo digitale · <a href="/strumenti" style={{ color: "#818cf8" }}>Strumenti di rete</a> · <a href="mailto:info@diobo.it" style={{ color: "#818cf8" }}>info@diobo.it</a> · <a href="/chi-siamo" style={{ color: "#818cf8" }}>Chi siamo</a> · <a href="/guide/spf-dkim-dmarc" style={{ color: "#818cf8" }}>Guida SPF/DKIM/DMARC</a> · <a href="/privacy" style={{ color: "#818cf8" }}>Privacy</a>
+            © 2026 DIOBO.IT · Bologna e provincia · da remoto in tutta Italia · <a href="/strumenti" style={{ color: "#818cf8" }}>Strumenti di rete</a> · <a href="mailto:info@diobo.it" style={{ color: "#818cf8" }}>info@diobo.it</a> · <a href="/chi-siamo" style={{ color: "#818cf8" }}>Chi siamo</a> · <a href="/guide" style={{ color: "#818cf8" }}>Guide</a> · <a href="/privacy" style={{ color: "#818cf8" }}>Privacy</a>
           </p>
         </footer>
       </div>

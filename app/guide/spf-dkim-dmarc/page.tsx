@@ -50,7 +50,7 @@ export default function Page() {
   return (
     <main className="tools-page" style={{ lineHeight: 1.75, maxWidth: 820 }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
-      <p style={{ color: "#818cf8", fontSize: ".85rem", margin: "1.5rem 0 0" }}>Guide · posta elettronica · 7 novembre 2026</p>
+      <p style={{ color: "#818cf8", fontSize: ".85rem", margin: "0" }}><Link href="/guide" style={{ color: "#818cf8" }}>Guide</Link> · posta elettronica · 7 novembre 2026</p>
       <h1 className="tools-title">{TITLE}</h1>
       <p className="tools-lead">
         Se le tue email arrivano in spam, o un cliente ti dice di aver ricevuto una mail &quot;tua&quot; che non hai mai scritto, il problema quasi sempre è in tre record DNS: SPF, DKIM e DMARC. Qui trovi cosa fanno, come leggerli e gli errori che vediamo più spesso.

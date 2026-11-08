@@ -200,3 +200,17 @@ html { scroll-behavior: smooth; }
 }
 .tools-page { padding-top: 5.5rem !important; }
 html { scroll-padding-top: 4.5rem; }
+
+/* ===== Modulo contatti ===== */
+.contact-form { width: 100%; max-width: 680px; display: grid; gap: 1rem; font-family: var(--font-exo2); background: rgba(5,5,20,.88); border: 1px solid rgba(99,102,241,.3); border-radius: 20px; padding: clamp(1.25rem, 4vw, 2rem); backdrop-filter: blur(6px); box-shadow: 0 0 60px rgba(0,0,0,.5); }
+.contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.contact-form label { display: grid; gap: .4rem; color: #c7d2fe; font-size: .95rem; font-weight: 600; }
+.contact-form input, .contact-form select, .contact-form textarea { padding: .8rem 1rem; border-radius: 12px; background: rgba(5,5,20,.9); border: 1px solid rgba(99,102,241,.45); color: #fff; font: inherit; font-size: 1rem; outline: none; }
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: #a5b4fc; }
+.contact-form button { justify-self: center; padding: 1rem 3.2rem; border-radius: 999px; border: 0; background: linear-gradient(135deg,#6366f1,#8b5cf6); color: #fff; font-family: var(--font-orbitron); font-weight: 700; letter-spacing: .12em; cursor: pointer; }
+.contact-form button:disabled { opacity: .6; cursor: wait; }
+.contact-note { text-align: center; color: #818cf8; font-size: .85rem; margin: 0; }
+.contact-note a { color: #c7d2fe; }
+.contact-ok { color: #4ade80; font-family: var(--font-exo2); font-size: 1.1rem; text-align: center; }
+.contact-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+@media (max-width: 560px) { .contact-row { grid-template-columns: 1fr; } }
