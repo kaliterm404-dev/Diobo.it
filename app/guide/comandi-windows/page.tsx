@@ -38,11 +38,9 @@ export default function Page() {
       <p style={{ color: "#818cf8", fontSize: ".85rem", margin: 0 }}><Link href="/guide" style={{ color: "#818cf8" }}>Guide</Link> · Windows · 8 novembre 2026</p>
       <h1 className="tools-title">{H1}</h1>
       <p className="tools-lead">
-        {n} comandi per Windows 10 e 11, scelti e verificati da un sistemista: quelli da scrivere nella casella <b>Esegui</b>{" "}(Win+R), le console di amministrazione, le cartelle rapide e i comandi da terminale che risolvono davvero i problemi. Niente comandi di Windows XP spacciati per attuali: quelli sono in fondo, con l&apos;alternativa di oggi.
+        {n} comandi per Windows 10 e 11, scelti e verificati da un sistemista: quelli da scrivere nella casella <b>Esegui</b>{" "}(Win+R), le console di amministrazione, le cartelle rapide e i comandi da terminale che risolvono davvero i problemi. In ordine alfabetico, con il nome inglese della funzione e la spiegazione in italiano. Niente comandi di Windows XP spacciati per attuali: quelli sono in fondo, con l&apos;alternativa di oggi.
       </p>
-      <p style={{ color: "#a0a0c0", fontSize: ".9rem", margin: "0 0 1.5rem" }}>
-        Vai a: {GROUPS.map((g, i) => <span key={g.id}>{i ? " · " : ""}<a href={`#${g.id}`} style={{ color: "#c7d2fe" }}>{g.title}</a></span>)}
-      </p>
+
       <WinCmdList />
       <section className="tool-card" style={{ marginTop: "2rem" }}>
         <h2>Domande frequenti</h2>
