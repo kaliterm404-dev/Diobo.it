@@ -116,7 +116,6 @@ export const GROUPS: Group[] = [
     title: "Cartelle rapide",
     intro: "Da scrivere nella casella Esegui (Win+R) o nella barra di Esplora file.",
     items: [
-      { cmd: ".", en: "Current user folder", desc: "Cartella dell'utente corrente" },
       { cmd: "shell:startup", en: "Startup folder (current user)", desc: "Esecuzione automatica dell'utente" },
       { cmd: "shell:common startup", en: "Startup folder (all users)", desc: "Esecuzione automatica per tutti gli utenti", tags: ["admin"] },
       { cmd: "shell:sendto", en: "Send To folder", desc: "Menu Invia a" },
