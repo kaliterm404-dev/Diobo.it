@@ -23,6 +23,12 @@ export default function Page() {
             </div>
           </Link>
         ))}
+        <Link href="/guide/comandi-windows">
+          <div className="tool-card" style={{ height: "100%" }}>
+            <h2>Comandi utili di Windows</h2>
+            <p style={{ margin: 0, color: "#c7d2fe" }}>Esegui, .msc, .cpl e riga di comando per Windows 10 e 11</p>
+          </div>
+        </Link>
       </div>
     </>
   );

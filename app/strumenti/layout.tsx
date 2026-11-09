@@ -7,10 +7,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <nav className="tools-nav" aria-label="Strumenti">
         <Link href="/strumenti">Tutti gli strumenti</Link>
         {TOOLS.map((t) => <Link key={t.slug} href={`/strumenti/${t.slug}`}>{t.name}</Link>)}
+        <Link href="/guide/comandi-windows">Comandi utili di Windows</Link>
       </nav>
       {children}
       <p className="tool-cta">
-        Problemi con DNS, posta o certificati? <Link href="/#checkup">Fai il check-up completo del tuo sito</Link> oppure <Link href="/#contatti">scrivici</Link> a <a href="mailto:info@diobo.it">info@diobo.it</a>. · <Link href="/chi-siamo">Chi siamo</Link> · <Link href="/guide">Guide</Link> · <Link href="/privacy">Privacy</Link>
+        Problemi con DNS, posta o certificati? <Link href="/#checkup">Fai il check-up completo del tuo sito</Link> oppure <Link href="/#contatti">scrivici</Link> a <a href="mailto:info@diobo.it">info@diobo.it</a>. · <Link href="/chi-siamo">Chi siamo</Link> · <Link href="/guide">Guide</Link> · <Link href="/guide/comandi-windows">Comandi Windows</Link> · <Link href="/privacy">Privacy</Link>
       </p>
     </div>
   );

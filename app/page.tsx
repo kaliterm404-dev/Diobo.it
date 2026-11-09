@@ -721,6 +721,18 @@ export default function Home() {
                 </div>
               </motion.a>
             ))}
+            <motion.a
+              href="/guide/comandi-windows"
+              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.5, delay: 0.36 }}
+              whileHover={{ y: -6 }}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <div className="tool-card" style={{ height: "100%", marginBottom: 0 }}>
+                <h3 style={{ fontFamily: "var(--font-orbitron)", fontSize: "0.85rem", letterSpacing: "0.1em", color: "#a5b4fc", margin: "0 0 0.6rem", textTransform: "uppercase" }}>Comandi utili di Windows</h3>
+                <p style={{ margin: 0, color: "#c7d2fe", fontFamily: "var(--font-exo2)", lineHeight: 1.6 }}>Esegui, .msc, .cpl e riga di comando per Windows 10 e 11, con ricerca e copia</p>
+              </div>
+            </motion.a>
           </div>
           <p style={{ marginTop: "1.5rem", fontFamily: "var(--font-exo2)", color: "#a0a0c0", textAlign: "center", maxWidth: "640px", lineHeight: 1.6 }}>
             Funzionano anche dentro gli assistenti AI come Claude e ChatGPT: li abbiamo collegati via MCP, lo standard che fa parlare l&apos;intelligenza artificiale con gli strumenti esterni.
@@ -939,7 +951,7 @@ export default function Home() {
             marginTop: "0.5rem",
             fontFamily: "var(--font-exo2)",
           }}>
-            © 2026 DIOBO.IT · Bologna e provincia · da remoto in tutta Italia · <a href="/strumenti" style={{ color: "#818cf8" }}>Strumenti di rete</a> · <a href="mailto:info@diobo.it" style={{ color: "#818cf8" }}>info@diobo.it</a> · <a href="/chi-siamo" style={{ color: "#818cf8" }}>Chi siamo</a> · <a href="/guide" style={{ color: "#818cf8" }}>Guide</a> · <a href="/privacy" style={{ color: "#818cf8" }}>Privacy</a>
+            © 2026 DIOBO.IT · Bologna e provincia · da remoto in tutta Italia · <a href="/strumenti" style={{ color: "#818cf8" }}>Strumenti di rete</a> · <a href="mailto:info@diobo.it" style={{ color: "#818cf8" }}>info@diobo.it</a> · <a href="/chi-siamo" style={{ color: "#818cf8" }}>Chi siamo</a> · <a href="/guide" style={{ color: "#818cf8" }}>Guide</a> · <a href="/guide/comandi-windows" style={{ color: "#818cf8" }}>Comandi Windows</a> · <a href="/privacy" style={{ color: "#818cf8" }}>Privacy</a>
           </p>
         </footer>
       </div>
