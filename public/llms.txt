@@ -1,6 +1,6 @@
 # DIOBO.IT
 
-> DIOBO.IT è il progetto di un sistemista di Bologna con oltre 20 anni di esperienza (server, reti, virtualizzazione, Microsoft 365, backup) che costruisce anche siti web. Servizi: siti web (da 390 €), assistenza IT e sistemistica (da 49 €/mese), dominio ed email professionale con SPF/DKIM/DMARC, grafica e logo. Bologna e provincia di persona, resto d'Italia da remoto. Contatto: info@diobo.it.
+> DIOBO.IT è il progetto di un sistemista di Bologna con oltre 20 anni di esperienza (server, reti, virtualizzazione, Microsoft 365, backup) che costruisce anche siti web. Servizi: siti web, assistenza IT e sistemistica, dominio ed email professionale con SPF/DKIM/DMARC, grafica e logo. Bologna e provincia di persona, resto d'Italia da remoto. Contatto: info@diobo.it.
 
 Il sito offre strumenti di rete gratuiti, senza registrazione, utilizzabili da persone e da assistenti AI.
 
@@ -34,7 +34,8 @@ Il sito offre strumenti di rete gratuiti, senza registrazione, utilizzabili da p
 
 ## Servizi
 
-- [Home e servizi](https://www.diobo.it/): siti web da 390 €, assistenza IT da 49 €/mese, dominio + email pro e grafica su preventivo.
+- [Home e servizi](https://www.diobo.it/): siti web, assistenza IT, dominio ed email professionali, grafica e logo. Per informazioni: info@diobo.it.
+- [Mappa in realtime](https://www.diobo.it/mappa-realtime): dashboard visuale con mappa di rete (networking) in realtime sopra Zabbix, scalabile, multisede e personalizzabile. Mostra lo stato degli apparati, il traffico sulle linee, dischi e temperature, gli allarmi quando nascono e chi è collegato, con indirizzi aggiornati in realtime. Portiamo in azienda anche il sistema di monitoraggio. Nella pagina: un esempio di mappa Zabbix multisede in video, due immagini e un PDF. Per informazioni: info@diobo.it.
 
 ## Server MCP (per assistenti AI)
 

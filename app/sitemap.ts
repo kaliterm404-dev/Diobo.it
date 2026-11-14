@@ -5,7 +5,8 @@ const BASE = "https://www.diobo.it";
 
 // Date di ultima modifica REALI per pagina: aggiornarle quando cambia il contenuto.
 const UPDATED: Record<string, string> = {
-  "/": "2026-11-08",
+  "/": "2026-11-14",
+  "/mappa-realtime": "2026-11-14",
   "/strumenti": "2026-11-08",
   "/guide": "2026-11-08",
   "/guide/spf-dkim-dmarc": "2026-11-07",
@@ -21,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ({ url: `${BASE}${path === "/" ? "" : path}`, lastModified: new Date(UPDATED[path]), changeFrequency, priority });
   return [
     page("/", 1, "weekly"),
+    page("/mappa-realtime", 0.9, "monthly"),
     page("/strumenti", 0.9, "monthly"),
     ...TOOLS.map((t) => ({ url: `${BASE}/strumenti/${t.slug}`, lastModified: new Date(TOOLS_UPDATED), changeFrequency: "monthly" as const, priority: 0.8 })),
     page("/guide", 0.7, "monthly"),

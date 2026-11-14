@@ -16,7 +16,7 @@ const exo2 = Exo_2({
 
 export const metadata: Metadata = {
   title: "DIOBO.IT — Siti Web e Assistenza IT a Bologna | Dal server al sito",
-  description: "Siti web veloci e sicuri da 390 €, assistenza IT da 49 €/mese, domini ed email pro, grafica e logo a Bologna. Un sistemista vero che costruisce anche il web.",
+  description: "Siti web, assistenza IT, domini ed email professionali a Bologna, da un sistemista vero che costruisce anche il web. Dal server al sito.",
   authors: [{ name: "DIOBO.IT" }],
   metadataBase: new URL("https://www.diobo.it"),
   openGraph: {
@@ -76,7 +76,7 @@ export default function RootLayout({
                   "Sviluppo siti web", "Next.js", "Hosting", "DNS", "Email deliverability", "SPF", "DKIM", "DMARC",
                   "Certificati SSL/TLS", "Assistenza informatica", "Amministrazione di sistema", "Virtualizzazione VMware e Proxmox",
                   "Reti aziendali e VLAN", "Firewall e VPN", "Windows Server e Active Directory", "Microsoft 365",
-                  "Backup e disaster recovery", "Monitoraggio Zabbix", "Grafica e logo design"
+                  "Backup e disaster recovery", "Monitoraggio Zabbix", "Mappa in realtime della rete", "Grafica e logo design"
                 ],
                 "slogan": "Dal server al sito",
                 "sameAs": []
@@ -95,36 +95,13 @@ export default function RootLayout({
                   "addressRegion": "Emilia-Romagna",
                   "addressCountry": "IT"
                 },
-                "priceRange": "€€",
                 "areaServed": [
                   { "@type": "City", "name": "Bologna" },
                   { "@type": "AdministrativeArea", "name": "Emilia-Romagna" },
                   { "@type": "Country", "name": "Italia" }
                 ],
                 "knowsLanguage": "it",
-                "contactPoint": { "@type": "ContactPoint", "email": "info@diobo.it", "contactType": "customer service", "availableLanguage": "Italian" },
-                "hasOfferCatalog": {
-                  "@type": "OfferCatalog",
-                  "name": "Servizi Digitali",
-                  "itemListElement": [
-                    {
-                      "@type": "Offer",
-                      "itemOffered": { "@type": "Service", "name": "Realizzazione Siti Web", "description": "Dal one-page al sito completo, veloci e sicuri" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": "390", "priceCurrency": "EUR" }
-                    },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": { "@type": "Service", "name": "Dominio ed email professionale", "description": "Registrazione dominio, caselle @tuodominio, configurazione SPF, DKIM e DMARC per non finire in spam" }
-                    },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": { "@type": "Service", "name": "Grafica e logo", "description": "Identità visiva distintiva, semplice ed elegante" }
-                    },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": { "@type": "Service", "name": "Assistenza IT e sistemistica", "description": "Reti, server, backup e sicurezza. Dal server al singolo dispositivo" }, "priceSpecification": { "@type": "UnitPriceSpecification", "price": "49", "priceCurrency": "EUR", "unitText": "mese" }
-                    }
-                  ]
-                }
+                "contactPoint": { "@type": "ContactPoint", "email": "info@diobo.it", "contactType": "customer service", "availableLanguage": "Italian" }
               },
               {
                 "@type": "WebSite",

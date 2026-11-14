@@ -123,6 +123,8 @@ body::after {
 
 /* Responsive grid */
 @media (max-width: 600px) {
+  .mappa-card { grid-template-columns: 1fr !important; }
+  .mappa-fermi { grid-template-columns: 1fr !important; }
   .services-grid {
     grid-template-columns: 1fr !important;
   }

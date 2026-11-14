@@ -54,15 +54,15 @@ const CONTACT_MAILTO =
   encodeURIComponent("Ciao, vorrei informazioni su:\n\n- Servizio (sito / assistenza IT / dominio ed email / grafica):\n- Due righe sul progetto:\n- Come preferite ricontattarmi:\n");
 
 const services = [
-  { icon: Layout, title: "Siti Web", desc: "Dal one-page al sito completo. Veloci, sicuri e su hosting moderno, di serie.", price: "da 390 €",
+  { icon: Layout, title: "Siti Web", desc: "Dal one-page al sito completo. Veloci, sicuri e su hosting moderno, di serie.",
     includes: ["Sito one-page adatto a smartphone, tablet e PC", "HTTPS con certificato automatico", "Dominio e DNS configurati", "Ottimizzazione Google: titoli, descrizioni, dati strutturati, sitemap, Search Console", "Header di sicurezza", "Check-up DIOBO con report alla consegna", "Un giro di revisioni incluso"],
-    note: "Dominio e hosting: costi annui a parte." },
-  { icon: Monitor, title: "Assistenza IT", desc: "Reti, server, backup e sicurezza. Dal server al singolo dispositivo, a intervento o in canone.", price: "da 49 €/mese",
-    includes: ["Monitoraggio di sito e servizi", "Controllo mensile di backup, certificati, DNS e posta", "Aggiornamenti di sicurezza programmati", "Supporto via email con risposta entro 1 giorno lavorativo", "Report mensile"],
-    note: "Interventi on-site (Bologna e provincia): su preventivo." },
-  { icon: Globe, title: "Dominio + Email pro", desc: "Un nome facile da ricordare e caselle email professionali @tuonome, configurate a regola d'arte.", price: "su preventivo",
+  },
+  { icon: Monitor, title: "Assistenza IT", desc: "Reti, server, backup e sicurezza. Dal server al singolo dispositivo.",
+    includes: ["Monitoraggio di sito e servizi", "Controllo mensile di backup, certificati, DNS e posta", "Aggiornamenti di sicurezza programmati", "Supporto via email, con risposte veloci", "Report mensile"],
+    note: "Di persona a Bologna e provincia, da remoto nel resto d'Italia." },
+  { icon: Globe, title: "Dominio + Email pro", desc: "Un nome facile da ricordare e caselle email professionali @tuonome, configurate a regola d'arte.",
     includes: ["Registrazione o trasferimento del dominio", "Caselle email @tuonome", "SPF, DKIM e DMARC configurati e verificati", "Migrazione della posta esistente"] },
-  { icon: Palette, title: "Grafica & Logo", desc: "Un'identità visiva distintiva, semplice ed elegante. Riconoscibile al primo sguardo.", price: "su preventivo",
+  { icon: Palette, title: "Grafica & Logo", desc: "Un'identità visiva distintiva, semplice ed elegante. Riconoscibile al primo sguardo.",
     includes: ["Logo con varianti", "Palette colori e tipografia", "File pronti per web e stampa"] },
 ];
 
@@ -361,17 +361,6 @@ function GlowCard({ service, index }: { service: typeof services[0]; index: numb
             position: "relative",
           }}>
             {service.desc}
-          </p>
-          <p style={{
-            marginTop: "1rem",
-            fontFamily: "var(--font-orbitron)",
-            fontSize: "0.8rem",
-            letterSpacing: "0.15em",
-            color: "#a5b4fc",
-            textTransform: "uppercase",
-            position: "relative",
-          }}>
-            {service.price}
           </p>
           <ul style={{ listStyle: "none", padding: 0, margin: "1rem 0 0", textAlign: "left", position: "relative" }}>
             {service.includes.map((it) => (
@@ -786,6 +775,41 @@ export default function Home() {
               <GlowCard key={i} service={s} index={i} />
             ))}
           </div>
+
+          {/* Mappa in realtime: un servizio a parte, con la sua pagina e il video */}
+          <motion.a
+            href="/mappa-realtime"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, type: "spring", damping: 20 }}
+            whileHover={{ y: -6, boxShadow: "0 10px 50px rgba(99,102,241,0.35)" }}
+            className="mappa-card"
+            style={{
+              display: "grid", gridTemplateColumns: "minmax(0, 300px) 1fr", alignItems: "stretch", gap: 0,
+              maxWidth: "800px", width: "100%", marginTop: "1.5rem", textDecoration: "none", color: "inherit",
+              borderRadius: "16px", overflow: "hidden", border: "1px solid rgba(129,140,248,0.55)",
+              background: "rgba(13,16,38,0.92)",
+            }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/mappa-realtime/copertina.jpg" alt="Esempio di mappa di rete su Zabbix: un allarme sulla Mappa in realtime" loading="lazy"
+              style={{ width: "100%", height: "100%", minHeight: "170px", objectFit: "cover", display: "block" }} />
+            <div style={{ padding: "1.4rem 1.6rem" }}>
+              <div style={{ fontFamily: "var(--font-orbitron)", fontSize: "0.62rem", letterSpacing: "0.2em", color: "#818cf8", marginBottom: "0.5rem" }}>
+                NOVITÀ
+              </div>
+              <div style={{ fontFamily: "var(--font-orbitron)", fontSize: "1.25rem", fontWeight: 700, marginBottom: "0.5rem" }}>
+                Mappa in realtime
+              </div>
+              <p style={{ fontFamily: "var(--font-exo2)", fontSize: "0.9rem", lineHeight: 1.6, color: "#e0e7ff", opacity: 0.8, marginBottom: "0.9rem" }}>
+                Dashboard visuale con mappa di rete in realtime su Zabbix: scalabile, multisede e personalizzabile.
+              </p>
+              <span style={{ fontFamily: "var(--font-orbitron)", fontSize: "0.7rem", letterSpacing: "0.1em", color: "#a5b4fc" }}>
+                GUARDA IL VIDEO →
+              </span>
+            </div>
+          </motion.a>
         </div>
 
         <Marquee />
