@@ -76,7 +76,7 @@ export default function RootLayout({
                   "Sviluppo siti web", "Next.js", "Hosting", "DNS", "Email deliverability", "SPF", "DKIM", "DMARC",
                   "Certificati SSL/TLS", "Assistenza informatica", "Amministrazione di sistema", "Virtualizzazione VMware e Proxmox",
                   "Reti aziendali e VLAN", "Firewall e VPN", "Windows Server e Active Directory", "Microsoft 365",
-                  "Backup e disaster recovery", "Monitoraggio Zabbix", "Mappa in realtime della rete", "Grafica e logo design"
+                  "Backup e disaster recovery", "Monitoraggio con Zabbix", "Mappa in realtime della rete", "Grafica e logo design"
                 ],
                 "slogan": "Dal server al sito",
                 "sameAs": []

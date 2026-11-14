@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 const TITLE = "Mappa di rete in realtime su Zabbix, anche multisede | DIOBO.IT";
-const DESC = "Dashboard visuale con mappa di rete (networking) in realtime sopra Zabbix: scalabile, multisede e personalizzabile. Cosa funziona, cosa si è rotto e chi è collegato. Esempio di mappa Zabbix in video.";
+const DESC = "Dashboard visuale con mappa di rete (networking) in realtime sopra Zabbix: scalabile, multisede e personalizzabile. Cosa funziona, cosa si è rotto e chi è collegato. Esempio di mappa su Zabbix in video.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -33,7 +33,7 @@ const ld = [
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    name: "Esempio di mappa Zabbix multisede in realtime: dal mondo al disco guasto",
+    name: "Esempio di mappa su Zabbix multisede in realtime: dal mondo al disco guasto",
     description: "Dimostrazione con un'azienda inventata di sedici sedi: nasce un allarme, la mappa lo mostra e si scende fino all'apparato che si è rotto.",
     thumbnailUrl: "https://www.diobo.it/mappa-realtime/copertina.jpg",
     contentUrl: "https://www.diobo.it/mappa-realtime/mappa-in-realtime.mp4",
@@ -65,7 +65,7 @@ export default function Page() {
         <source src="/mappa-realtime/mappa-in-realtime.mp4" type="video/mp4" />
       </video>
       <p style={{ color: "#818cf8", fontSize: ".85rem", marginTop: ".6rem" }}>
-        Un esempio di mappa Zabbix multisede, trenta secondi senza audio. Azienda e dati sono inventati.
+        Un esempio di mappa su Zabbix multisede, trenta secondi senza audio. Azienda e dati sono inventati.
       </p>
 
       <H>La mappa di rete, dal vivo</H>
@@ -95,14 +95,14 @@ export default function Page() {
         La mappa lavora sopra Zabbix, il sistema di monitoraggio open source. Se in azienda non c&apos;è, portiamo noi anche quello. Si apre da un browser: sui computer non si installa niente.
       </p>
 
-      <H>Un esempio di mappa Zabbix multisede</H>
+      <H>Un esempio di mappa su Zabbix multisede</H>
       <p>
         Due fermi immagine della mappa dimostrativa. Un clic li apre grandi.
       </p>
       <div className="mappa-fermi" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginTop: "1rem" }}>
         {[
           { f: "mappa-mondo", t: "Sedici sedi in una mappa", a: "Esempio di mappa di rete multisede su Zabbix: sedici sedi collegate, con un allarme acceso" },
-          { f: "mappa-sede", t: "La sede e l'apparato guasto", a: "Esempio di mappa Zabbix: una sede da vicino, con il NAS in allarme e la scheda del guasto" },
+          { f: "mappa-sede", t: "La sede e l'apparato guasto", a: "Esempio di mappa su Zabbix: una sede da vicino, con il NAS in allarme e la scheda del guasto" },
         ].map((x) => (
           <a key={x.f} href={`/mappa-realtime/${x.f}.webp`} target="_blank" rel="noopener" style={{ textDecoration: "none", color: "inherit" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -119,6 +119,9 @@ export default function Page() {
       <H>Per informazioni</H>
       <p>
         Scrivi a <a href="mailto:info@diobo.it?subject=Mappa%20in%20realtime">info@diobo.it</a> oppure usa il <Link href="/#contatti">modulo di contatto</Link>. Bologna e provincia di persona, il resto d&apos;Italia da remoto.
+      </p>
+      <p style={{ color: "#64748b", fontSize: ".75rem", marginTop: "2.5rem" }}>
+        Zabbix è un marchio registrato di Zabbix LLC. DIOBO.IT non è affiliato a Zabbix LLC.
       </p>
     </main>
   );

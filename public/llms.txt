@@ -35,7 +35,7 @@ Il sito offre strumenti di rete gratuiti, senza registrazione, utilizzabili da p
 ## Servizi
 
 - [Home e servizi](https://www.diobo.it/): siti web, assistenza IT, dominio ed email professionali, grafica e logo. Per informazioni: info@diobo.it.
-- [Mappa in realtime](https://www.diobo.it/mappa-realtime): dashboard visuale con mappa di rete (networking) in realtime sopra Zabbix, scalabile, multisede e personalizzabile. Mostra lo stato degli apparati, il traffico sulle linee, dischi e temperature, gli allarmi quando nascono e chi è collegato, con indirizzi aggiornati in realtime. Portiamo in azienda anche il sistema di monitoraggio. Nella pagina: un esempio di mappa Zabbix multisede in video, due immagini e un PDF. Per informazioni: info@diobo.it.
+- [Mappa in realtime](https://www.diobo.it/mappa-realtime): dashboard visuale con mappa di rete (networking) in realtime sopra Zabbix, scalabile, multisede e personalizzabile. Mostra lo stato degli apparati, il traffico sulle linee, dischi e temperature, gli allarmi quando nascono e chi è collegato, con indirizzi aggiornati in realtime. Portiamo in azienda anche il sistema di monitoraggio. Nella pagina: un esempio di mappa su Zabbix multisede in video, due immagini e un PDF. Per informazioni: info@diobo.it.
 
 ## Server MCP (per assistenti AI)
 

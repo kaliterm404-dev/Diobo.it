@@ -64,6 +64,9 @@ export default function Page() {
       <p>
         Scrivi a <a href="mailto:info@diobo.it">info@diobo.it</a>. Bologna e provincia di persona, il resto d&apos;Italia da remoto. Prima di contattarci puoi fare il <Link href="/#checkup">check-up gratuito del tuo sito</Link> o usare gli <Link href="/strumenti">strumenti di rete</Link>.
       </p>
+      <p style={{ color: "#64748b", fontSize: ".75rem", marginTop: "2.5rem" }}>
+        Zabbix è un marchio registrato di Zabbix LLC. DIOBO.IT non è affiliato a Zabbix LLC.
+      </p>
     </main>
   );
 }
