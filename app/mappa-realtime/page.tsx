@@ -55,7 +55,6 @@ export default function Page() {
       <video
         controls
         playsInline
-        muted
         preload="none"
         poster="/mappa-realtime/copertina.jpg"
         aria-label="Video dimostrativo della Mappa in realtime: nasce un allarme e si scende fino all'apparato guasto"
@@ -65,7 +64,7 @@ export default function Page() {
         <source src="/mappa-realtime/mappa-in-realtime.mp4" type="video/mp4" />
       </video>
       <p style={{ color: "#818cf8", fontSize: ".85rem", marginTop: ".6rem" }}>
-        Un esempio di mappa su Zabbix multisede, trenta secondi senza audio. Azienda e dati sono inventati.
+        Un esempio di mappa su Zabbix multisede, trenta secondi, con audio. Azienda e dati sono inventati.
       </p>
 
       <H>La mappa di rete, dal vivo</H>
