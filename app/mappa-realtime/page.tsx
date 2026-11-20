@@ -120,7 +120,7 @@ export default function Page() {
       <p>
         Scrivi a <a href="mailto:info@diobo.it?subject=Mappa%20in%20realtime">info@diobo.it</a> oppure usa il <Link href="/#contatti">modulo di contatto</Link>. Bologna e provincia di persona, il resto d&apos;Italia da remoto.
       </p>
-      <p style={{ color: "#64748b", fontSize: ".75rem", marginTop: "2.5rem" }}>
+      <p style={{ color: "#94a3b8", fontSize: ".75rem", marginTop: "2.5rem" }}>
         Zabbix è un marchio registrato di Zabbix LLC. DIOBO.IT non è affiliato a Zabbix LLC.
       </p>
     </main>

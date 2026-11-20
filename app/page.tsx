@@ -653,7 +653,7 @@ export default function Home() {
               }}
             />
             <p style={{
-              color: "#555",
+              color: "#8b8b8b",
               fontSize: "0.75rem",
               letterSpacing: "0.3em",
               textTransform: "uppercase",
@@ -977,7 +977,7 @@ export default function Home() {
           }}>
             © 2026 DIOBO.IT · Bologna e provincia · da remoto in tutta Italia · <a href="/strumenti" style={{ color: "#818cf8" }}>Strumenti di rete</a> · <a href="mailto:info@diobo.it" style={{ color: "#818cf8" }}>info@diobo.it</a> · <a href="/chi-siamo" style={{ color: "#818cf8" }}>Chi siamo</a> · <a href="/guide" style={{ color: "#818cf8" }}>Guide</a> · <a href="/guide/comandi-windows" style={{ color: "#818cf8" }}>Comandi Windows</a> · <a href="/privacy" style={{ color: "#818cf8" }}>Privacy</a>
           </p>
-          <p style={{ color: "#475569", fontSize: "0.7rem", marginTop: "0.4rem", fontFamily: "var(--font-exo2)" }}>
+          <p style={{ color: "#94a3b8", fontSize: "0.7rem", marginTop: "0.4rem", fontFamily: "var(--font-exo2)" }}>
             Zabbix è un marchio registrato di Zabbix LLC. DIOBO.IT non è affiliato a Zabbix LLC.
           </p>
         </footer>
