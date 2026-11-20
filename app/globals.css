@@ -52,6 +52,29 @@ html, body {
   animation: gradient-shift 4s linear infinite;
 }
 
+/* Ingresso dell'apertura in CSS, con gli stessi tempi di prima:
+   il testo è nell'HTML e compare anche senza script */
+.hero-in { animation: hero-in 1s ease-out both; }
+.hero-in-1 { --hero-y: 30px; animation-delay: 1.2s; }
+.hero-in-2 { --hero-y: 20px; animation-delay: 1.6s; }
+.hero-in-3 { --hero-y: 20px; animation-duration: 0.9s; animation-delay: 2s; }
+.hero-in-4 { --hero-y: 0px; animation-duration: 1.5s; animation-delay: 1.8s; }
+.hero-gradient-text.hero-in-logo {
+  animation: gradient-shift 4s linear infinite, hero-logo 1.8s ease-out both;
+}
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(var(--hero-y, 20px)); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes hero-logo {
+  from { opacity: 0; filter: blur(20px); transform: scale(0.95); }
+  to { opacity: 1; filter: blur(0); transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-in { animation: none; }
+  .hero-gradient-text.hero-in-logo { animation: none; }
+}
+
 .hero-gradient-text span {
   -webkit-text-fill-color: #6366f1;
 }

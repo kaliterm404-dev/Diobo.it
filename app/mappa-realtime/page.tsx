@@ -95,6 +95,18 @@ export default function Page() {
         La mappa lavora sopra Zabbix, il sistema di monitoraggio open source. Se in azienda non c&apos;è, portiamo noi anche quello. Si apre da un browser: sui computer non si installa niente.
       </p>
 
+      <H>Per chi è e come lavora</H>
+      <L items={[
+        "Per le aziende che vogliono vedere la propria rete, con una sede o con più sedi.",
+        "Lavora in sola lettura: guarda lo stato della rete e non cambia niente sugli apparati.",
+        "I dati restano in azienda, sul sistema di monitoraggio installato in sede.",
+      ]} />
+
+      <H>Privacy</H>
+      <p>
+        «Chi c&apos;è in rete» mostra nomi, computer e indirizzi: sono dati personali dell&apos;azienda e restano sul suo sistema, come tutto il resto.
+      </p>
+
       <H>Un esempio di mappa su Zabbix multisede</H>
       <p>
         Due fermi immagine della mappa dimostrativa. Un clic li apre grandi.

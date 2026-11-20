@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
-import { motion, useInView, useScroll, useTransform, useMotionValue, useSpring } from "motion/react";
+import { motion, useScroll, useTransform, useMotionValue, useSpring } from "motion/react";
 import { Monitor, Globe, Palette, Layout } from "lucide-react";
 import dynamic from "next/dynamic";
 
 import Checkup from "@/components/Checkup";
+import { Reveal } from "@/components/Reveal";
 import ContactForm from "@/components/ContactForm";
 import { TOOLS } from "@/lib/tools";
 
@@ -179,7 +180,7 @@ function UniversiSection() {
           .case-card { grid-template-columns: 1fr !important; max-width: 380px !important; }
         }
       `}</style>
-      <motion.h2
+      <Reveal.h2
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -192,8 +193,8 @@ function UniversiSection() {
         }}
       >
         I NOSTRI <span style={{ color: "#6366f1" }}>LAVORI</span>
-      </motion.h2>
-      <motion.p
+      </Reveal.h2>
+      <Reveal.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -205,9 +206,9 @@ function UniversiSection() {
         }}
       >
         Progetti reali, online e mantenuti. Ogni sito parte dal dominio e arriva alla posta: tutto configurato e verificato.
-      </motion.p>
+      </Reveal.p>
 
-      <motion.a
+      <Reveal.a
         href="https://www.freedombonsai.com"
         target="_blank"
         rel="noopener"
@@ -259,7 +260,7 @@ function UniversiSection() {
             VISITA IL SITO →
           </span>
         </div>
-      </motion.a>
+      </Reveal.a>
     </div>
   );
 }
@@ -296,7 +297,7 @@ function GlowCard({ service, index }: { service: typeof services[0]; index: numb
   }, [rotateX, rotateY]);
 
   return (
-    <motion.div
+    <Reveal.div
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -374,7 +375,7 @@ function GlowCard({ service, index }: { service: typeof services[0]; index: numb
           )}
         </div>
       </motion.div>
-    </motion.div>
+    </Reveal.div>
   );
 }
 
@@ -475,7 +476,7 @@ function MissionTimeline() {
 
       <div style={{ display: "flex", flexDirection: "column", gap: "3.5rem" }}>
         {missionPoints.map((text, i) => (
-          <motion.div
+          <Reveal.div
             key={i}
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -512,7 +513,7 @@ function MissionTimeline() {
             }}>
               {text}
             </span>
-          </motion.div>
+          </Reveal.div>
         ))}
       </div>
     </div>
@@ -536,11 +537,8 @@ export default function Home() {
           justifyContent: "center",
           padding: "2rem",
         }}>
-          <motion.div role="presentation"
-            initial={{ opacity: 0, filter: "blur(20px)", scale: 0.95 }}
-            animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
-            transition={{ duration: 1.8, ease: "easeOut" }}
-            className="hero-gradient-text"
+          <div role="presentation"
+            className="hero-gradient-text hero-in-logo"
             style={{
               fontFamily: "var(--font-orbitron)",
               fontSize: "clamp(2rem, 6vw, 5rem)",
@@ -551,12 +549,10 @@ export default function Home() {
             }}
           >
             DIOBO<span style={{ color: "#6366f1" }}>.IT</span>
-          </motion.div>
+          </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.2, type: "spring", damping: 18 }}
+          <p
+            className="hero-in hero-in-1"
             style={{
               fontSize: "clamp(1rem, 2vw, 1.5rem)",
               color: "#a0a0c0",
@@ -569,12 +565,10 @@ export default function Home() {
             }}
           >
             Il tuo universo digitale
-          </motion.p>
+          </p>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.6 }}
+          <h1
+            className="hero-in hero-in-2"
             style={{
               fontSize: "clamp(0.95rem, 1.6vw, 1.15rem)",
               color: "#e0e7ff",
@@ -588,13 +582,10 @@ export default function Home() {
           >
             Dal server al sito. Siti web, assistenza IT, domini ed email professionali a Bologna —
             da un sistemista vero che costruisce anche il web.
-          </motion.h1>
+          </h1>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 2 }}
-            className="hero-ctas"
+          <div
+            className="hero-ctas hero-in hero-in-3"
             style={{ display: "flex", gap: "1rem", marginTop: "2.5rem", flexWrap: "wrap", justifyContent: "center" }}
           >
             <motion.a
@@ -634,12 +625,10 @@ export default function Home() {
             >
               CONTATTACI
             </motion.a>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.5, delay: 1.8 }}
+          <div
+            className="hero-in hero-in-4"
             style={{ marginTop: "3rem" }}
           >
             <motion.div
@@ -662,7 +651,7 @@ export default function Home() {
             }}>
               Scrolla per esplorare
             </p>
-          </motion.div>
+          </div>
         </div>
 
         {/* SPACER */}
@@ -675,28 +664,28 @@ export default function Home() {
 
         {/* CASSETTA DEL SISTEMISTA */}
         <section style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "4rem 1.5rem 6rem" }}>
-          <motion.p
+          <Reveal.p
             initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
             style={{ fontFamily: "var(--font-orbitron)", fontSize: "0.7rem", letterSpacing: "0.35em", color: "#818cf8", marginBottom: "1rem", textTransform: "uppercase", textAlign: "center" }}
           >
             Gratis · senza registrazione · senza pubblicità
-          </motion.p>
-          <motion.h2
+          </Reveal.p>
+          <Reveal.h2
             initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             transition={{ duration: 0.8, type: "spring", damping: 20 }}
             style={{ fontFamily: "var(--font-orbitron)", fontSize: "clamp(1.5rem, 4vw, 3rem)", fontWeight: 700, textAlign: "center", marginBottom: "1rem", textShadow: "0 0 20px rgba(99,102,241,0.3)" }}
           >
             LA CASSETTA DEL <span style={{ color: "#6366f1" }}>SISTEMISTA</span>
-          </motion.h2>
-          <motion.p
+          </Reveal.h2>
+          <Reveal.p
             initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
             style={{ fontFamily: "var(--font-exo2)", fontSize: "1.05rem", color: "#e0e7ff", opacity: 0.85, textAlign: "center", maxWidth: "640px", marginBottom: "2.5rem", lineHeight: 1.7 }}
           >
             Gli stessi strumenti che usiamo ogni giorno per tenere in piedi reti, domini e posta. Aperti a tutti, gratis: perché dietro DIOBO c&apos;è un sistemista, non un template.
-          </motion.p>
+          </Reveal.p>
           <div className="tool-grid" style={{ maxWidth: "1000px", width: "100%" }}>
             {TOOLS.map((t, i) => (
-              <motion.a
+              <Reveal.a
                 key={t.slug}
                 href={`/strumenti/${t.slug}`}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-40px" }}
@@ -708,9 +697,9 @@ export default function Home() {
                   <h3 style={{ fontFamily: "var(--font-orbitron)", fontSize: "0.85rem", letterSpacing: "0.1em", color: "#a5b4fc", margin: "0 0 0.6rem", textTransform: "uppercase" }}>{t.name}</h3>
                   <p style={{ margin: 0, color: "#c7d2fe", fontFamily: "var(--font-exo2)", lineHeight: 1.6 }}>{t.short}</p>
                 </div>
-              </motion.a>
+              </Reveal.a>
             ))}
-            <motion.a
+            <Reveal.a
               href="/guide/comandi-windows"
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: 0.36 }}
@@ -721,7 +710,7 @@ export default function Home() {
                 <h3 style={{ fontFamily: "var(--font-orbitron)", fontSize: "0.85rem", letterSpacing: "0.1em", color: "#a5b4fc", margin: "0 0 0.6rem", textTransform: "uppercase" }}>Comandi utili di Windows</h3>
                 <p style={{ margin: 0, color: "#c7d2fe", fontFamily: "var(--font-exo2)", lineHeight: 1.6 }}>Esegui, .msc, .cpl e riga di comando per Windows 10 e 11, con ricerca e copia</p>
               </div>
-            </motion.a>
+            </Reveal.a>
           </div>
           <p style={{ marginTop: "1.5rem", fontFamily: "var(--font-exo2)", color: "#a0a0c0", textAlign: "center", maxWidth: "640px", lineHeight: 1.6 }}>
             Funzionano anche dentro gli assistenti AI come Claude e ChatGPT: li abbiamo collegati via MCP, lo standard che fa parlare l&apos;intelligenza artificiale con gli strumenti esterni.
@@ -747,7 +736,7 @@ export default function Home() {
           justifyContent: "center",
           padding: "4rem 2rem",
         }}>
-          <motion.h2
+          <Reveal.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -762,7 +751,7 @@ export default function Home() {
             }}
           >
             Cosa <span style={{ color: "#6366f1" }}>facciamo</span>
-          </motion.h2>
+          </Reveal.h2>
 
           <div style={{
             display: "grid",
@@ -777,7 +766,7 @@ export default function Home() {
           </div>
 
           {/* Mappa in realtime: un servizio a parte, con la sua pagina e il video */}
-          <motion.a
+          <Reveal.a
             href="/mappa-realtime"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -809,7 +798,7 @@ export default function Home() {
                 GUARDA IL VIDEO →
               </span>
             </div>
-          </motion.a>
+          </Reveal.a>
         </div>
 
         <Marquee />
@@ -823,7 +812,7 @@ export default function Home() {
           alignItems: "center",
           padding: "6rem 2rem",
         }}>
-          <motion.h2
+          <Reveal.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -838,7 +827,7 @@ export default function Home() {
             }}
           >
             PERCHÉ <span style={{ color: "#6366f1" }}>DIOBO</span>
-          </motion.h2>
+          </Reveal.h2>
           <div className="why-grid" style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
@@ -847,7 +836,7 @@ export default function Home() {
             width: "100%",
           }}>
             {whyPoints.map((w, i) => (
-              <motion.div
+              <Reveal.div
                 key={w.title}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -878,7 +867,7 @@ export default function Home() {
                 }}>
                   {w.desc}
                 </p>
-              </motion.div>
+              </Reveal.div>
             ))}
           </div>
         </div>
@@ -894,7 +883,7 @@ export default function Home() {
           justifyContent: "center",
           padding: "4rem 2rem",
         }}>
-          <motion.h2
+          <Reveal.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -909,7 +898,7 @@ export default function Home() {
             }}
           >
             LA NOSTRA <span style={{ color: "#6366f1" }}>MISSION</span>
-          </motion.h2>
+          </Reveal.h2>
 
           <MissionTimeline />
         </div>
@@ -929,7 +918,7 @@ export default function Home() {
           padding: "5rem 1.5rem 6rem",
           scrollMarginTop: "4.5rem",
         }}>
-          <motion.h2
+          <Reveal.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -944,7 +933,7 @@ export default function Home() {
             }}
           >
             CHIEDI E TI <span style={{ color: "#6366f1" }}>SARÀ DATO</span>
-          </motion.h2>
+          </Reveal.h2>
           <p style={{ color: "#e0e7ff", fontSize: "1.1rem", textAlign: "center", maxWidth: "560px", margin: "0 0 0.6rem", fontFamily: "var(--font-exo2)", lineHeight: 1.7 }}>
             Raccontaci cosa ti serve, oppure scrivici direttamente:
           </p>

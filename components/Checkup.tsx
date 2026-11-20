@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { Reveal } from "@/components/Reveal";
 import { ShieldCheck, Mail, Gauge, Search, CheckCircle2, AlertTriangle, XCircle, Loader2 } from "lucide-react";
 
 type Status = "ok" | "warn" | "bad";
@@ -128,25 +129,25 @@ export default function Checkup() {
 
   return (
     <section id="checkup" style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "6rem 1.5rem", scrollMarginTop: "2rem" }}>
-      <motion.p
+      <Reveal.p
         initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
         style={{ fontFamily: "var(--font-orbitron)", fontSize: "0.7rem", letterSpacing: "0.35em", color: "#818cf8", marginBottom: "1rem", textTransform: "uppercase" }}
       >
         Check-up gratuito · 10 secondi
-      </motion.p>
-      <motion.h2
+      </Reveal.p>
+      <Reveal.h2
         initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
         transition={{ duration: 0.8, type: "spring", damping: 20 }}
         style={{ fontFamily: "var(--font-orbitron)", fontSize: "clamp(1.5rem, 4vw, 3rem)", fontWeight: 700, textAlign: "center", marginBottom: "1rem", textShadow: "0 0 20px rgba(99,102,241,0.3)", maxWidth: "900px" }}
       >
         IL TUO SITO È <span style={{ color: "#6366f1" }}>DAVVERO SICURO?</span>
-      </motion.h2>
-      <motion.p
+      </Reveal.h2>
+      <Reveal.p
         initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
         style={{ fontFamily: "var(--font-exo2)", fontSize: "1.05rem", color: "#e0e7ff", opacity: 0.85, textAlign: "center", maxWidth: "620px", marginBottom: "2.5rem", lineHeight: 1.7 }}
       >
         Scrivi il tuo dominio: controlliamo sicurezza, email, velocità e visibilità su Google come farebbe un sistemista. Gratis, senza registrazione.
-      </motion.p>
+      </Reveal.p>
 
       <form onSubmit={run} className="checkup-form" style={{ display: "flex", gap: "0.75rem", width: "100%", maxWidth: "620px" }}>
         <input
